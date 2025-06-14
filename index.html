@@ -55,7 +55,7 @@
                     <a href="#contato" class="hidden sm:inline-block bg-sky-500 text-white font-bold py-2.5 px-6 rounded-lg hover:bg-sky-600 transition-all duration-300">
                         Agendar Auditoria
                     </a>
-                    <button @click="openMenu = !openMenu" class="lg:hidden ml-4 text-white focus:outline-none">
+                    <button @click="openMenu = !openMenu" class="lg:hidden ml-4 p-2 text-white focus:outline-none">
                         <i class="fas text-2xl" :class="openMenu ? 'fa-times' : 'fa-bars'"></i>
                     </button>
                 </div>
@@ -78,7 +78,7 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="relative pt-40 pb-24 lg:pt-48 lg:pb-32 overflow-hidden">
+        <section class="relative pt-32 pb-24 lg:pt-48 lg:pb-32 overflow-hidden">
             <div class="hero-gradient absolute inset-0"></div>
             <div class="container mx-auto px-4 sm:px-6 text-center relative z-10">
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
@@ -101,9 +101,9 @@
         <!-- The Problem Section -->
         <section id="problema" class="py-16 sm:py-24">
              <div class="container mx-auto px-4 sm:px-6">
-                 <div class="text-center mb-16">
+                 <div class="text-center mb-12 sm:mb-16">
                     <h2 class="text-3xl sm:text-4xl font-bold text-white">Processos manuais, dados perdidos e oportunidades desperdiçadas.</h2>
-                    <p class="text-lg mt-4 max-w-3xl mx-auto text-slate-400">Sua empresa pode estar perdendo dinheiro e competitividade por problemas que a IA resolve de forma eficaz.</p>
+                    <p class="text-md sm:text-lg mt-4 max-w-3xl mx-auto text-slate-400">Sua empresa pode estar perdendo dinheiro e competitividade por problemas que a IA resolve de forma eficaz.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="p-6 rounded-lg bg-slate-900 border border-slate-800">
@@ -128,57 +128,57 @@
         <!-- Methodology Section -->
         <section id="metodologia" class="py-16 sm:py-24 bg-slate-900 section-glow">
             <div class="container mx-auto px-4 sm:px-6">
-                <div class="text-center mb-16">
+                <div class="text-center mb-12 sm:mb-16">
                     <h2 class="text-3xl sm:text-4xl font-bold text-white">Nossa Metodologia de 3 Passos</h2>
-                    <p class="text-lg mt-4 max-w-2xl mx-auto text-slate-400">Uma jornada estruturada para garantir que a tecnologia entregue o máximo valor ao seu negócio.</p>
+                    <p class="text-md sm:text-lg mt-4 max-w-2xl mx-auto text-slate-400">Uma jornada estruturada para garantir que a tecnologia entregue o máximo valor ao seu negócio.</p>
                 </div>
                 <div class="space-y-16">
                     <!-- Step 1 -->
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                         <div>
                             <span class="text-5xl font-black text-slate-800">01</span>
                             <h3 class="text-2xl font-bold text-white mb-4">Auditoria e Diagnóstico Estratégico</h3>
                             <p class="text-slate-400 mb-6">Esta é a fase de descoberta. Não se trata apenas de tecnologia, mas de entender profundamente seu negócio.</p>
                             <ul class="space-y-3 text-sm">
-                                <li class="flex items-start"><i class="fas fa-check-circle text-sky-400 mt-1 mr-3"></i><span>Mapeamos seus processos, dados e sistemas atuais.</span></li>
-                                <li class="flex items-start"><i class="fas fa-check-circle text-sky-400 mt-1 mr-3"></i><span>Identificamos os pontos de maior alavancagem para a IA.</span></li>
-                                <li class="flex items-start"><i class="fas fa-check-circle text-sky-400 mt-1 mr-3"></i><span>Entregamos um <strong class="text-white">Roadmap de Implementação</strong> com ROI projetado.</span></li>
+                                <li class="flex items-start"><i class="fas fa-check-circle text-sky-400 mt-1 mr-3 flex-shrink-0"></i><span>Mapeamos seus processos, dados e sistemas atuais.</span></li>
+                                <li class="flex items-start"><i class="fas fa-check-circle text-sky-400 mt-1 mr-3 flex-shrink-0"></i><span>Identificamos os pontos de maior alavancagem para a IA.</span></li>
+                                <li class="flex items-start"><i class="fas fa-check-circle text-sky-400 mt-1 mr-3 flex-shrink-0"></i><span>Entregamos um <strong class="text-white">Roadmap de Implementação</strong> com ROI projetado.</span></li>
                             </ul>
                         </div>
-                        <div class="bg-slate-800/50 p-8 rounded-xl border border-slate-800">
-                            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1974&auto=format&fit=crop" class="rounded-lg" alt="[Изображение команды на диагностической встрече]" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0f172a/94a3b8?text=Image+Not+Available';">
+                        <div class="bg-slate-800/50 p-4 sm:p-8 rounded-xl border border-slate-800">
+                            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1974&auto=format&fit=crop" class="rounded-lg w-full h-auto" alt="[Изображение команды на диагностической встрече]" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0f172a/e0f2fe?text=Изображение+недоступно';">
                         </div>
                     </div>
                     <!-- Step 2 -->
-                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                          <div class="lg:order-2">
                             <span class="text-5xl font-black text-slate-800">02</span>
                             <h3 class="text-2xl font-bold text-white mb-4">Desenvolvimento e Modelagem da Solução</h3>
                             <p class="text-slate-400 mb-6">Com o diagnóstico em mãos, nossa equipe de cientistas de dados e engenheiros começa a construir a solução.</p>
                              <ul class="space-y-3 text-sm">
-                                <li class="flex items-start"><i class="fas fa-check-circle text-sky-400 mt-1 mr-3"></i><span>Preparamos e tratamos os dados para a modelagem.</span></li>
-                                <li class="flex items-start"><i class="fas fa-check-circle text-sky-400 mt-1 mr-3"></i><span>Desenvolvemos e treinamos os algoritmos de IA personalizados.</span></li>
-                                <li class="flex items-start"><i class="fas fa-check-circle text-sky-400 mt-1 mr-3"></i><span>Criamos protótipos e realizamos testes para validar a eficácia.</span></li>
+                                <li class="flex items-start"><i class="fas fa-check-circle text-sky-400 mt-1 mr-3 flex-shrink-0"></i><span>Preparamos e tratamos os dados para a modelagem.</span></li>
+                                <li class="flex items-start"><i class="fas fa-check-circle text-sky-400 mt-1 mr-3 flex-shrink-0"></i><span>Desenvolvemos e treinamos os algoritmos de IA personalizados.</span></li>
+                                <li class="flex items-start"><i class="fas fa-check-circle text-sky-400 mt-1 mr-3 flex-shrink-0"></i><span>Criamos protótipos e realizamos testes para validar a eficácia.</span></li>
                             </ul>
                         </div>
-                        <div class="bg-slate-800/50 p-8 rounded-xl border border-slate-800 lg:order-1">
-                            <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=2070&auto=format&fit=crop" class="rounded-lg" alt="[Изображение разработчиков, работающих над кодом]" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0f172a/94a3b8?text=Image+Not+Available';">
+                        <div class="bg-slate-800/50 p-4 sm:p-8 rounded-xl border border-slate-800 lg:order-1">
+                            <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=2070&auto=format&fit=crop" class="rounded-lg w-full h-auto" alt="[Изображение разработчиков, работающих над кодом]" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0f172a/e0f2fe?text=Изображение+недоступно';">
                         </div>
                     </div>
                     <!-- Step 3 -->
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                         <div>
                             <span class="text-5xl font-black text-slate-800">03</span>
                             <h3 class="text-2xl font-bold text-white mb-4">Implementação, Integração e Suporte</h3>
                             <p class="text-slate-400 mb-6">A fase final é onde a tecnologia se torna parte viva da sua operação diária.</p>
                             <ul class="space-y-3 text-sm">
-                                <li class="flex items-start"><i class="fas fa-check-circle text-sky-400 mt-1 mr-3"></i><span>Integramos a solução de IA aos seus sistemas (ERP, CRM, etc.).</span></li>
-                                <li class="flex items-start"><i class="fas fa-check-circle text-sky-400 mt-1 mr-3"></i><span>Treinamos sua equipe para utilizar a nova ferramenta.</span></li>
-                                <li class="flex items-start"><i class="fas fa-check-circle text-sky-400 mt-1 mr-3"></i><span>Oferecemos suporte e otimização contínua para garantir os melhores resultados.</span></li>
+                                <li class="flex items-start"><i class="fas fa-check-circle text-sky-400 mt-1 mr-3 flex-shrink-0"></i><span>Integramos a solução de IA aos seus sistemas (ERP, CRM, etc.).</span></li>
+                                <li class="flex items-start"><i class="fas fa-check-circle text-sky-400 mt-1 mr-3 flex-shrink-0"></i><span>Treinamos sua equipe para utilizar a nova ferramenta.</span></li>
+                                <li class="flex items-start"><i class="fas fa-check-circle text-sky-400 mt-1 mr-3 flex-shrink-0"></i><span>Oferecemos suporte e otimização contínua para garantir os melhores resultados.</span></li>
                             </ul>
                         </div>
-                        <div class="bg-slate-800/50 p-8 rounded-xl border border-slate-800">
-                           <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2070&auto=format&fit=crop" class="rounded-lg" alt="[Изображение команды, сотрудничающей над проектом]" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0f172a/94a3b8?text=Image+Not+Available';">
+                        <div class="bg-slate-800/50 p-4 sm:p-8 rounded-xl border border-slate-800">
+                           <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2070&auto=format&fit=crop" class="rounded-lg w-full h-auto" alt="[Изображение команды, сотрудничающей над проектом]" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0f172a/e0f2fe?text=Изображение+недоступно';">
                         </div>
                     </div>
                 </div>
@@ -188,27 +188,27 @@
          <!-- How IA Creates Value Section -->
         <section id="valor" class="py-16 sm:py-24">
              <div class="container mx-auto px-4 sm:px-6">
-                 <div class="text-center mb-16">
+                 <div class="text-center mb-12 sm:mb-16">
                     <h2 class="text-3xl sm:text-4xl font-bold text-white">Como a IA Gera Valor para o seu Negócio</h2>
-                    <p class="text-lg mt-4 max-w-3xl mx-auto text-slate-400">A tecnologia é o meio. O objetivo é o impacto direto nos seus resultados financeiros e operacionais.</p>
+                    <p class="text-md sm:text-lg mt-4 max-w-3xl mx-auto text-slate-400">A tecnologia é o meio. O objetivo é o impacto direto nos seus resultados financeiros e operacionais.</p>
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
                     <!-- Revenue Growth -->
-                    <div class="bg-slate-900 p-8 rounded-xl border border-slate-800">
+                    <div class="bg-slate-900 p-6 sm:p-8 rounded-xl border border-slate-800">
                         <h3 class="text-2xl font-bold text-white mb-6">Crescimento de Receita</h3>
                         <div class="space-y-5">
-                            <div class="flex items-start"><i class="fas fa-bullhorn text-xl text-sky-400 mr-4 mt-1"></i><div><strong class="text-white">Marketing Personalizado:</strong> Aumente a conversão com campanhas direcionadas para o público certo.</div></div>
-                            <div class="flex items-start"><i class="fas fa-tags text-xl text-sky-400 mr-4 mt-1"></i><div><strong class="text-white">Precificação Dinâmica:</strong> Otimize os preços em tempo real com base na demanda e no comportamento do mercado.</div></div>
-                            <div class="flex items-start"><i class="fas fa-user-plus text-xl text-sky-400 mr-4 mt-1"></i><div><strong class="text-white">Qualificação de Leads:</strong> Foque seus esforços de venda nos leads com maior probabilidade de fechar negócio.</div></div>
+                            <div class="flex items-start"><i class="fas fa-bullhorn text-xl text-sky-400 mr-4 mt-1 flex-shrink-0"></i><div><strong class="text-white">Marketing Personalizado:</strong> Aumente a conversão com campanhas direcionadas para o público certo.</div></div>
+                            <div class="flex items-start"><i class="fas fa-tags text-xl text-sky-400 mr-4 mt-1 flex-shrink-0"></i><div><strong class="text-white">Precificação Dinâmica:</strong> Otimize os preços em tempo real com base na demanda e no comportamento do mercado.</div></div>
+                            <div class="flex items-start"><i class="fas fa-user-plus text-xl text-sky-400 mr-4 mt-1 flex-shrink-0"></i><div><strong class="text-white">Qualificação de Leads:</strong> Foque seus esforços de venda nos leads com maior probabilidade de fechar negócio.</div></div>
                         </div>
                     </div>
                      <!-- Process Optimization -->
-                    <div class="bg-slate-900 p-8 rounded-xl border border-slate-800">
+                    <div class="bg-slate-900 p-6 sm:p-8 rounded-xl border border-slate-800">
                         <h3 class="text-2xl font-bold text-white mb-6">Otimização de Processos</h3>
                         <div class="space-y-5">
-                            <div class="flex items-start"><i class="fas fa-gears text-xl text-sky-400 mr-4 mt-1"></i><div><strong class="text-white">Automação de Backoffice:</strong> Reduza custos automatizando tarefas como faturamento e entrada de dados.</div></div>
-                            <div class="flex items-start"><i class="fas fa-truck-fast text-xl text-sky-400 mr-4 mt-1"></i><div><strong class="text-white">Otimização da Cadeia de Suprimentos:</strong> Preveja a demanda e otimize rotas de entrega e níveis de estoque.</div></div>
-                             <div class="flex items-start"><i class="fas fa-screwdriver-wrench text-xl text-sky-400 mr-4 mt-1"></i><div><strong class="text-white">Manutenção Preditiva:</strong> Evite paradas inesperadas prevendo falhas em equipamentos antes que aconteçam.</div></div>
+                            <div class="flex items-start"><i class="fas fa-gears text-xl text-sky-400 mr-4 mt-1 flex-shrink-0"></i><div><strong class="text-white">Automação de Backoffice:</strong> Reduza custos automatizando tarefas como faturamento e entrada de dados.</div></div>
+                            <div class="flex items-start"><i class="fas fa-truck-fast text-xl text-sky-400 mr-4 mt-1 flex-shrink-0"></i><div><strong class="text-white">Otimização da Cadeia de Suprimentos:</strong> Preveja a demanda e otimize rotas de entrega e níveis de estoque.</div></div>
+                             <div class="flex items-start"><i class="fas fa-screwdriver-wrench text-xl text-sky-400 mr-4 mt-1 flex-shrink-0"></i><div><strong class="text-white">Manutenção Preditiva:</strong> Evite paradas inesperadas prevendo falhas em equipamentos antes que aconteçam.</div></div>
                         </div>
                     </div>
                 </div>
@@ -233,27 +233,27 @@
         <!-- Case Studies Section -->
         <section id="cases" class="py-16 sm:py-24">
             <div class="container mx-auto px-4 sm:px-6">
-                <div class="text-center mb-16">
+                <div class="text-center mb-12 sm:mb-16">
                     <h2 class="text-3xl sm:text-4xl font-bold text-white">Nossos Projetos em Ação</h2>
-                    <p class="text-lg mt-4 max-w-2xl mx-auto text-slate-400">Resultados concretos para clientes reais.</p>
+                    <p class="text-md sm:text-lg mt-4 max-w-2xl mx-auto text-slate-400">Resultados concretos para clientes reais.</p>
                 </div>
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Case 1 -->
-                    <div class="bg-slate-900 rounded-lg p-8 border border-slate-800 flex flex-col">
+                    <div class="bg-slate-900 rounded-lg p-6 sm:p-8 border border-slate-800 flex flex-col">
                         <span class="inline-block bg-sky-900/50 text-sky-300 text-sm font-semibold px-3 py-1 rounded-full mb-4 self-start">Indústria</span>
                         <h3 class="text-xl font-bold text-white mb-3">Redução de Desperdício na Produção</h3>
                         <p class="text-slate-400 text-sm mb-6 flex-grow">Implementamos visão computacional para identificar defeitos em tempo real, reduzindo o descarte de material e os custos associados.</p>
                         <div class="mt-auto pt-4 border-t border-slate-800"><strong class="text-2xl text-sky-400">-22%</strong><span class="text-sm text-slate-400"> de desperdício</span></div>
                     </div>
                      <!-- Case 2 -->
-                    <div class="bg-slate-900 rounded-lg p-8 border border-slate-800 flex flex-col">
+                    <div class="bg-slate-900 rounded-lg p-6 sm:p-8 border border-slate-800 flex flex-col">
                         <span class="inline-block bg-sky-900/50 text-sky-300 text-sm font-semibold px-3 py-1 rounded-full mb-4 self-start">Logística</span>
                         <h3 class="text-xl font-bold text-white mb-3">Otimização de Rotas de Entrega</h3>
                         <p class="text-slate-400 text-sm mb-6 flex-grow">Desenvolvemos um algoritmo que otimiza as rotas em tempo real, considerando trânsito, janelas de entrega e capacidade dos veículos.</p>
                         <div class="mt-auto pt-4 border-t border-slate-800"><strong class="text-2xl text-sky-400">-15%</strong><span class="text-sm text-slate-400"> no custo com combustível</span></div>
                     </div>
                      <!-- Case 3 -->
-                    <div class="bg-slate-900 rounded-lg p-8 border border-slate-800 flex flex-col">
+                    <div class="bg-slate-900 rounded-lg p-6 sm:p-8 border border-slate-800 flex flex-col">
                         <span class="inline-block bg-sky-900/50 text-sky-300 text-sm font-semibold px-3 py-1 rounded-full mb-4 self-start">Financeiro</span>
                         <h3 class="text-xl font-bold text-white mb-3">Análise de Risco de Crédito</h3>
                         <p class="text-slate-400 text-sm mb-6 flex-grow">Criamos um modelo de machine learning que analisa múltiplas variáveis para prever a probabilidade de inadimplência com mais precisão.</p>
@@ -270,7 +270,7 @@
                     <h2 class="text-3xl sm:text-4xl font-bold text-white">Agende seu Diagnóstico Estratégico de IA</h2>
                     <p class="text-lg mt-4 text-slate-400">Vamos descobrir juntos o potencial da Inteligência Artificial no seu negócio. A primeira análise é gratuita e sem compromisso.</p>
                 </div>
-                <div class="max-w-xl mx-auto mt-12 bg-slate-950 p-8 rounded-xl border border-slate-800">
+                <div class="max-w-xl mx-auto mt-12 bg-slate-950 p-6 sm:p-8 rounded-xl border border-slate-800">
                     <form id="contact-form">
                         <div class="space-y-6">
                             <div>
@@ -287,8 +287,7 @@
                             </div>
                         </div>
                         <div class="mt-8">
-                            <!-- UPDATE: Changed button text, color, and added icon -->
-                            <button type="submit" class="w-full flex items-center justify-center gap-3 bg-green-500 text-white font-bold py-3.5 px-10 rounded-lg hover:bg-green-600 transition-all duration-300">
+                            <button type="submit" class="w-full flex items-center justify-center gap-3 bg-green-500 text-white font-bold py-3.5 px-8 sm:px-10 rounded-lg hover:bg-green-600 transition-all duration-300">
                                 <i class="fab fa-whatsapp text-xl"></i> Agendar via WhatsApp
                             </button>
                         </div>
@@ -301,9 +300,9 @@
     <!-- Footer -->
     <footer class="bg-slate-950 border-t border-slate-800">
         <div class="container mx-auto px-4 sm:px-6 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="col-span-1 md:col-span-2 lg:col-span-1">
-                    <h3 class="text-xl font-bold text-white">ITCBR.<span class="text-sky-400">IO</span></h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center md:text-left">
+                <div class="md:col-span-2 lg:col-span-1">
+                    <h3 class="text-xl font-bold text-white inline-block md:block">ITCBR.<span class="text-sky-400">IO</span></h3>
                     <p class="text-sm mt-2 text-slate-400">ITCBR.IO LTDA<br>CNPJ: 53.821.516/0001-63</p>
                 </div>
                  <div class="col-span-1">
@@ -389,28 +388,16 @@
             }
 
             // --- START: Contact Form WhatsApp Logic ---
-            // --- НАЧАЛО: Логика для отправки формы в WhatsApp ---
             const contactForm = document.getElementById('contact-form');
             if (contactForm) {
                 contactForm.addEventListener('submit', function(event) {
-                    // Предотвращаем стандартную отправку формы
                     event.preventDefault();
-
-                    // Получаем данные из полей формы
                     const name = document.getElementById('name').value;
                     const email = document.getElementById('email').value;
                     const message = document.getElementById('message').value;
-                    
-                    // Номер телефона WhatsApp (без "+", только цифры)
                     const whatsappNumber = '5588997889999';
-                    
-                    // Формируем текст сообщения
                     const text = `Здравствуйте! Новый запрос с сайта ITCBR.IO:\n\n*Имя:* ${name}\n*Email:* ${email}\n\n*Сообщение:*\n${message}`;
-
-                    // Создаем ссылку для WhatsApp. encodeURIComponent кодирует текст для безопасной передачи в URL
                     const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
-
-                    // Открываем WhatsApp в новой вкладке/приложении
                     window.open(whatsappLink, '_blank');
                 });
             }
