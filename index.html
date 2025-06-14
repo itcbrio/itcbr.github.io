@@ -291,7 +291,7 @@
                     <p class="text-lg mt-4 text-slate-400">Vamos descobrir juntos o potencial da Inteligência Artificial no seu negócio. A primeira análise é gratuita e sem compromisso.</p>
                 </div>
                 <div class="max-w-xl mx-auto mt-12 bg-slate-950 p-8 rounded-xl border border-slate-800">
-                    <form action="https://formspree.io/f/YOUR_UNIQUE_FORM_ID" method="POST">
+                    <form id="contact-form">
                         <div class="space-y-6">
                             <div>
                                 <label for="name" class="block text-sm font-medium text-slate-300 mb-2">Nome Completo</label>
@@ -308,7 +308,7 @@
                         </div>
                         <div class="mt-8">
                             <button type="submit" class="w-full bg-sky-500 text-white font-bold py-3.5 px-10 rounded-lg hover:bg-sky-600 transition-all duration-300">
-                                Agendar Minha Auditoria
+                                Enviar via WhatsApp
                             </button>
                         </div>
                     </form>
@@ -377,67 +377,86 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const chartCanvas = document.getElementById('growthChart');
-            if (!chartCanvas) return;
+            if (chartCanvas) {
+                const chartData = {
+                    labels: ['Início', 'Mês 2', 'Mês 4', 'Mês 6', 'Mês 8', 'Mês 10', 'Mês 12'],
+                    datasets: [{
+                        label: 'Eficiência Operacional (%)',
+                        data: [62, 68, 75, 81, 86, 92, 97],
+                        borderColor: 'rgb(56, 189, 248)',
+                        backgroundColor: 'rgba(56, 189, 248, 0.1)',
+                        fill: true,
+                        tension: 0.4,
+                    }]
+                };
 
-            const chartData = {
-                labels: ['Início', 'Mês 2', 'Mês 4', 'Mês 6', 'Mês 8', 'Mês 10', 'Mês 12'],
-                datasets: [{
-                    label: 'Eficiência Operacional (%)',
-                    data: [62, 68, 75, 81, 86, 92, 97],
-                    borderColor: 'rgb(56, 189, 248)',
-                    backgroundColor: 'rgba(56, 189, 248, 0.1)',
-                    fill: true,
-                    tension: 0.4,
-                }]
-            };
-
-            const config = {
-                type: 'line',
-                data: chartData,
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: {
-                        y: {
-                            beginAtZero: false,
-                            min: 50,
-                            max: 100,
-                            ticks: { color: '#94a3b8' }
+                const config = {
+                    type: 'line',
+                    data: chartData,
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: false,
+                                min: 50,
+                                max: 100,
+                                ticks: { color: '#94a3b8' }
+                            },
+                            x: {
+                                ticks: { color: '#94a3b8' }
+                            }
                         },
-                        x: {
-                            ticks: { color: '#94a3b8' }
-                        }
-                    },
-                    plugins: {
-                        legend: { display: false },
-                        tooltip: {
-                            callbacks: {
-                                label: function(context) {
-                                    return `${context.dataset.label}: ${context.parsed.y}%`;
+                        plugins: {
+                            legend: { display: false },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        return `${context.dataset.label}: ${context.parsed.y}%`;
+                                    }
                                 }
                             }
                         }
                     }
-                }
-            };
-            
-            let growthChart = new Chart(chartCanvas, config);
+                };
+                
+                let growthChart = new Chart(chartCanvas, config);
 
-            // Animate on scroll
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        // Restart animation
-                        if (growthChart) {
-                            growthChart.destroy();
+                const observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            if (growthChart) {
+                                growthChart.destroy();
+                            }
+                            growthChart = new Chart(chartCanvas, config);
+                            observer.unobserve(chartCanvas);
                         }
-                        growthChart = new Chart(chartCanvas, config);
-                        observer.unobserve(chartCanvas); // Animate only once
-                    }
+                    });
+                }, { threshold: 0.5 });
+                
+                observer.observe(chartCanvas);
+            }
+
+            // WhatsApp Form Handler
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(event) {
+                    event.preventDefault();
+
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const message = document.getElementById('message').value;
+                    const whatsappNumber = '5588997889999';
+
+                    let whatsappMessage = `Olá! Meu nome é *${name}*.\n`;
+                    whatsappMessage += `Email: ${email}\n\n`;
+                    whatsappMessage += `*Principal Desafio:*\n${message}`;
+
+                    const encodedMessage = encodeURIComponent(whatsappMessage);
+                    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+                    window.open(whatsappUrl, '_blank');
                 });
-            }, { threshold: 0.5 });
-            
-            observer.observe(chartCanvas);
+            }
         });
     </script>
 </body>
