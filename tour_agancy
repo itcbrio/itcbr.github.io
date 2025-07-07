@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solution Presentation for Tourism Companies</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light blue-gray background */
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a202c; /* Dark gray */
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .subsection-title {
+            font-size: 1.875rem;
+            font-weight: 600;
+            color: #2d3748; /* Medium gray */
+            margin-bottom: 1rem;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        .feature-icon {
+            flex-shrink: 0;
+            margin-right: 1rem;
+            color: #4299e1; /* Blue */
+        }
+        .language-button {
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+            background-color: #cbd5e0; /* Light gray */
+            color: #4a5568; /* Darker gray */
+        }
+        .language-button.active {
+            background-color: #4299e1; /* Blue */
+            color: #ffffff;
+        }
+        .language-button:hover:not(.active) {
+            background-color: #a0aec0; /* Medium gray on hover */
+        }
+        /* Removed image-related styles as images are no longer present */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Language Selector -->
+        <div class="flex justify-center space-x-4 mb-8">
+            <button class="language-button" onclick="showLanguage('en', this)">English</button>
+            <button class="language-button" onclick="showLanguage('tr', this)">Türkçe</button>
+            <button class="language-button" onclick="showLanguage('ru', this)">Русский</button>
+            <button class="language-button" onclick="showLanguage('th', this)">ไทย</button>
+        </div>
+
+        <!-- English Content -->
+        <div id="lang-en" class="language-content">
+            <h1 class="text-5xl font-extrabold text-center text-blue-800 mb-8 leading-tight">Solution Presentation for Tourism Companies in Thailand</h1>
+            <p class="text-2xl text-center text-gray-700 mb-12">Innovative Platform for Tourist Transportation Management</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card bg-gradient-to-br from-blue-50 to-indigo-100">
+                    <h2 class="subsection-title text-blue-700">What is it?</h2>
+                    <p class="text-lg text-gray-800 mb-4">Our solution is an advanced web service designed specifically for tourism companies in Thailand looking to optimize and enhance their tourist transportation operations. We offer a comprehensive tool for efficient real-time management of an entire fleet of vehicles and water transport.</p>
+                    <p class="text-lg text-gray-800">The platform ensures seamless interaction between drivers/captains, operators/administrators, and tourists, providing each participant with the necessary tools to increase transparency, safety, and service quality. It's not just a tracking system, but a full-fledged solution for planning, controlling, and analyzing transportation processes, which significantly reduces operating costs and increases customer satisfaction.</p>
+                </div>
+                <div class="card bg-gradient-to-br from-green-50 to-teal-100">
+                    <h2 class="subsection-title text-green-700">How it works?</h2>
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-gray-700 mb-2">For Drivers and Captains:</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>The driver or captain uses a provided work phone, connected to the vehicle's charger.</li>
+                            <li>Opens a browser, navigates to the website, and enters their name.</li>
+                            <li>The service automatically determines location and displays the route.</li>
+                            <li>The user sees:
+                                <ul class="list-circle list-inside ml-4">
+                                    <li>current position on the map,</li>
+                                    <li>next route point,</li>
+                                    <li>estimated time of arrival,</li>
+                                    <li>information about tourists to pick up.</li>
+                                    <li>an SOS button for emergency situations.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-gray-700 mb-2">For Operators and Administrators:</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>Access to an interactive map of all vehicles.</li>
+                            <li>Visibility of each driver's or captain's current status: on time or delayed.</li>
+                            <li>Ability to track deviations from the route.</li>
+                            <li>Full statistics for each employee (arrival time, route adherence accuracy).</li>
+                            <li>Bonus and penalty system based on statistics.</li>
+                            <li>Ability to evaluate employees during their probation period.</li>
+                            <li>Automatic regular reports and analytics.</li>
+                            <li>Data visualization for decision-making.</li>
+                            <li>Possibility of integration with CRM and other systems.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-700 mb-2">For Tourists:</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>Automatic notifications about approaching transport.</li>
+                            <li>Information about the driver or captain, vehicle number, and arrival time.</li>
+                            <li>Ability to leave a review or comment about the driver or captain via QR code.</li>
+                            <li><strong class="text-red-600">Ability to file a complaint against the driver at any point during the trip via QR code.</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card bg-gradient-to-br from-purple-50 to-pink-100">
+                <h2 class="subsection-title text-purple-700">Additional Features:</h2>
+                <ul class="list-disc list-inside text-lg text-gray-800 space-y-2">
+                    <li>Multilingual support for the convenience of users from different countries.</li>
+                    <li>Feedback system via QR code for ratings and comments from tourists (e.g., driving quality, driver behavior, and other remarks).</li>
+                    <li><strong class="text-red-600">Real-time complaint system via QR code, accessible to tourists during the trip.</strong></li>
+                    <li>Collection of tourist feedback and complaint statistics to improve service levels.</li>
+                </ul>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card bg-gradient-to-br from-yellow-50 to-orange-100">
+                    <h2 class="subsection-title text-orange-700">Advantages:</h2>
+                    <ul class="list-disc list-inside text-lg text-gray-800 space-y-2">
+                        <li>Ease of use (no additional app installation required).</li>
+                        <li>Full control and improved route planning.</li>
+                        <li>Increased tourist satisfaction.</li>
+                        <li>Improved employee management efficiency.</li>
+                        <li>Reduced costs and improved service quality.</li>
+                        <li>Enhanced safety and prompt response to emergency situations.</li>
+                    </ul>
+                </div>
+                <div class="card bg-gradient-to-br from-red-50 to-pink-100">
+                    <h2 class="subsection-title text-red-700">Why choose us:</h2>
+                    <ul class="list-disc list-inside text-lg text-gray-800 space-y-2">
+                        <li>Flexibility and reliability of the solution.</li>
+                        <li>Minimal requirements to get started.</li>
+                        <li>Accessibility from any device.</li>
+                        <li>Staff support and training.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center mt-12 p-8 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-xl shadow-lg">
+                <h2 class="text-3xl font-bold mb-4">Start using our solution today and boost the efficiency of your tourism business!</h2>
+                <a href="https://wa.me/5588997889999" target="_blank" class="bg-white text-blue-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-100 transition duration-300 transform hover:scale-105 inline-block">Learn More</a>
+            </div>
+        </div>
+
+        <!-- Turkish Content -->
+        <div id="lang-tr" class="language-content hidden">
+            <h1 class="text-5xl font-extrabold text-center text-blue-800 mb-8 leading-tight">Tayland Turizm Şirketleri için Çözüm Sunumu</h1>
+            <p class="text-2xl text-center text-gray-700 mb-12">Turist Taşımacılığı Yönetimi için Yenilikçi Platform</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card bg-gradient-to-br from-blue-50 to-indigo-100">
+                    <h2 class="subsection-title text-blue-700">Bu nedir?</h2>
+                    <p class="text-lg text-gray-800 mb-4">Çözümümüz, Tayland'daki turizm şirketlerinin turist taşımacılığı operasyonlarını optimize etmek ve geliştirmek için özel olarak tasarlanmış gelişmiş bir web hizmetidir. Tüm araç filosunun ve su taşımacılığının gerçek zamanlı olarak etkin bir şekilde yönetilmesi için kapsamlı bir araç sunuyoruz.</p>
+                    <p class="text-lg text-gray-800">Platform, sürücüler/kaptanlar, operatörler/yöneticiler ve turistler arasında sorunsuz etkileşim sağlayarak her katılımcıya şeffaflığı, güvenliği ve hizmet kalitesini artırmak için gerekli araçları sunar. Bu sadece bir takip sistemi değil, aynı zamanda taşıma süreçlerini planlamak, kontrol etmek ve analiz etmek için tam teşekküllü bir çözümdür, bu da işletme maliyetlerini önemli ölçüde azaltır ve müşteri memnuniyetini artırır.</p>
+                </div>
+                <div class="card bg-gradient-to-br from-green-50 to-teal-100">
+                    <h2 class="subsection-title text-green-700">Nasıl çalışır?</h2>
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-gray-700 mb-2">Sürücüler ve Kaptanlar için:</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>Sürücü veya kaptan, araca bağlı şarj cihazına takılı olarak verilen bir iş telefonunu kullanır.</li>
+                            <li>Bir tarayıcı açar, web sitesine gider ve adını girer.</li>
+                            <li>Hizmet otomatik olarak konumu belirler ve rotayı görüntüler.</li>
+                            <li>Kullanıcı şunları görür:
+                                <ul class="list-circle list-inside ml-4">
+                                    <li>haritadaki mevcut konum,</li>
+                                    <li>sonraki rota noktası,</li>
+                                    <li>tahmini varış süresi,</li>
+                                    <li>alınacak turistler hakkında bilgi.</li>
+                                    <li>acil durumlar için bir SOS düğmesi.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-gray-700 mb-2">Operatörler ve Yöneticiler için:</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>Tüm araçların etkileşimli haritasına erişim.</li>
+                            <li>Her sürücü veya kaptanın mevcut durumunun görünürlüğü: zamanında veya gecikmeli.</li>
+                            <li>Rotadan sapmaları izleme yeteneği.</li>
+                            <li>Her çalışan için tam istatistikler (varış zamanı, rotaya uyum doğruluğu).</li>
+                            <li>İstatistiklere dayalı bonus ve ceza sistemi.</li>
+                            <li>Deneme süresi boyunca çalışanları değerlendirme yeteneği.</li>
+                            <li>Otomatik düzenli raporlar ve analizler.</li>
+                            <li>Karar verme için veri görselleştirme.</li>
+                            <li>CRM ve diğer sistemlerle entegrasyon imkanı.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-700 mb-2">Turistler için:</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>Yaklaşan ulaşım hakkında otomatik bildirimler.</li>
+                            <li>Sürücü veya kaptan, araç numarası ve tahmini varış süresi hakkında bilgi.</li>
+                            <li>QR kodu aracılığıyla sürücü veya kaptan hakkında yorum veya geri bildirim bırakma yeteneği.</li>
+                            <li><strong class="text-red-600">QR kodu aracılığıyla seyahat sırasında sürücüye karşı şikayette bulunma yeteneği.</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card bg-gradient-to-br from-purple-50 to-pink-100">
+                <h2 class="subsection-title text-purple-700">Ek Özellikler:</h2>
+                <ul class="list-disc list-inside text-lg text-gray-800 space-y-2">
+                    <li>Farklı ülkelerden kullanıcıların rahatlığı için çok dilli destek.</li>
+                    <li>Turistlerden gelen derecelendirmeler ve yorumlar için QR kodu aracılığıyla geri bildirim sistemi (örn. sürüş kalitesi, sürücü davranışı ve diğer açıklamalar).</li>
+                    <li><strong class="text-red-600">Seyahat sırasında turistlerin erişebileceği, QR kodu aracılığıyla gerçek zamanlı şikayet sistemi.</strong></li>
+                    <li>Hizmet seviyesini iyileştirmek için turist geri bildirim ve şikayet istatistiklerinin toplanması.</li>
+                </ul>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card bg-gradient-to-br from-yellow-50 to-orange-100">
+                    <h2 class="subsection-title text-orange-700">Avantajlar:</h2>
+                    <ul class="list-disc list-inside text-lg text-gray-800 space-y-2">
+                        <li>Kullanım kolaylığı (ek uygulama yüklemeye gerek yok).</li>
+                        <li>Tam kontrol ve iyileştirilmiş rota planlaması.</li>
+                        <li>Artan turist memnuniyeti.</li>
+                        <li>Geliştirilmiş çalışan yönetimi verimliliği.</li>
+                        <li>Azalan maliyetler ve iyileştirilmiş hizmet kalitesi.</li>
+                        <li>Gelişmiş güvenlik ve acil durumlara hızlı yanıt.</li>
+                    </ul>
+                </div>
+                <div class="card bg-gradient-to-br from-red-50 to-pink-100">
+                    <h2 class="subsection-title text-red-700">Neden bizi seçmelisiniz:</h2>
+                    <ul class="list-disc list-inside text-lg text-gray-800 space-y-2">
+                        <li>Çözümün esnekliği ve güvenilirliği.</li>
+                        <li>Başlamak için minimum gereksinimler.</li>
+                        <li>Herhangi bir cihazdan erişilebilirlik.</li>
+                        <li>Personel desteği ve eğitimi.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center mt-12 p-8 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-xl shadow-lg">
+                <h2 class="text-3xl font-bold mb-4">Çözümümüzü bugün kullanmaya başlayın ve turizm işinizin verimliliğini artırın!</h2>
+                <a href="https://wa.me/5588997889999" target="_blank" class="bg-white text-blue-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-100 transition duration-300 transform hover:scale-105 inline-block">Daha Fazla Bilgi Edinin</a>
+            </div>
+        </div>
+
+        <!-- Russian Content -->
+        <div id="lang-ru" class="language-content hidden">
+            <h1 class="text-5xl font-extrabold text-center text-blue-800 mb-8 leading-tight">Презентация решения для туристических компаний в Таиланде</h1>
+            <p class="text-2xl text-center text-gray-700 mb-12">Инновационная платформа для управления перевозками туристов</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card bg-gradient-to-br from-blue-50 to-indigo-100">
+                    <h2 class="subsection-title text-blue-700">Что это такое?</h2>
+                    <p class="text-lg text-gray-800 mb-4">Наше решение — это передовой веб-сервис, разработанный специально для туристических компаний в Таиланде, стремящихся оптимизировать и улучшить свои операции по перевозке туристов. Мы предлагаем комплексный инструмент для эффективного управления всем автопарком и водным транспортом в режиме реального времени.</p>
+                    <p class="text-lg text-gray-800">Платформа обеспечивает бесшовное взаимодействие между водителями/капитанами, операторами/администраторами и туристами, предоставляя каждому участнику необходимые инструменты для повышения прозрачности, безопасности и качества обслуживания. Это не просто система отслеживания, а полноценное решение для планирования, контроля и анализа транспортных процессов, что позволяет значительно сократить операционные расходы и повысить удовлетворенность клиентов.</p>
+                </div>
+                <div class="card bg-gradient-to-br from-green-50 to-teal-100">
+                    <h2 class="subsection-title text-green-700">Как это работает?</h2>
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-gray-700 mb-2">Для водителей и капитанов:</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>Водитель или капитан использует предоставленный рабочий телефон, подключённый к зарядке транспорта.</li>
+                            <li>Открывает браузер, переходит на сайт и вводит своё имя.</li>
+                            <li>Сервис автоматически определяет местоположение и отображает маршрут.</li>
+                            <li>Пользователь видит:
+                                <ul class="list-circle list-inside ml-4">
+                                    <li>текущее положение на карте,</li>
+                                    <li>следующую точку маршрута,</li>
+                                    <li>время до прибытия,</li>
+                                    <li>информацию о туристах, которых необходимо забрать.</li>
+                                    <li>кнопку SOS для экстренных ситуаций.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-gray-700 mb-2">Для операторов и администраторов:</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>Доступ к интерактивной карте всех транспортных средств.</li>
+                            <li>Видимость текущего статуса каждого водителя или капитана: вовремя или с опозданием.</li>
+                            <li>Возможность отслеживать отклонения от маршрута.</li>
+                            <li>Полная статистика по каждому сотруднику (время прибытия, точность следования маршруту).</li>
+                            <li>Система бонусов и штрафов на основе статистики.</li>
+                            <li>Возможность оценки сотрудников во время испытательного срока.</li>
+                            <li>Автоматические регулярные отчёты и аналитика.</li>
+                            <li>Визуализация данных для принятия решений.</li>
+                            <li>Возможность интеграции с CRM и другими системами.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-700 mb-2">Для туристов:</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>Автоматические уведомления о приближении транспорта.</li>
+                            <li>Информация о водителе или капитане, номере транспорта и времени прибытия.</li>
+                            <li>Возможность оставить отзыв или комментарий о водителе или капитане с помощью QR-кода.</li>
+                            <li><strong class="text-red-600">Возможность подать жалобу на водителя в любой момент поездки с помощью QR-кода.</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card bg-gradient-to-br from-purple-50 to-pink-100">
+                <h2 class="subsection-title text-purple-700">Дополнительные возможности:</h2>
+                <ul class="list-disc list-inside text-lg text-gray-800 space-y-2">
+                    <li>Поддержка мультиязычности для удобства пользователей из разных стран.</li>
+                    <li>Система обратной связи через QR-код для оценки и комментариев от туристов (например, качество вождения, поведение водителя и другие замечания).</li>
+                    <li><strong class="text-red-600">Система подачи жалоб в реальном времени через QR-код, доступная туристам во время поездки.</strong></li>
+                    <li>Сбор статистики по отзывам и жалобам туристов для повышения уровня сервиса.</li>
+                </ul>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card bg-gradient-to-br from-yellow-50 to-orange-100">
+                    <h2 class="subsection-title text-orange-700">Преимущества:</h2>
+                    <ul class="list-disc list-inside text-lg text-gray-800 space-y-2">
+                        <li>Простота использования (без установки дополнительных приложений).</li>
+                        <li>Полный контроль и улучшение планирования маршрутов.</li>
+                        <li>Повышение удовлетворенности туристов.</li>
+                        <li>Улучшение эффективности управления сотрудниками.</li>
+                        <li>Снижение расходов и повышение качества сервиса.</li>
+                        <li>Усиление безопасности и оперативная реакция на экстренные ситуации.</li>
+                    </ul>
+                </div>
+                <div class="card bg-gradient-to-br from-red-50 to-pink-100">
+                    <h2 class="subsection-title text-red-700">Почему выбирают нас:</h2>
+                    <ul class="list-disc list-inside text-lg text-gray-800 space-y-2">
+                        <li>Гибкость и надёжность решения.</li>
+                        <li>Минимальные требования для начала работы.</li>
+                        <li>Доступность с любого устройства.</li>
+                        <li>Поддержка и обучение персонала.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center mt-12 p-8 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-xl shadow-lg">
+                <h2 class="text-3xl font-bold mb-4">Начните использовать наше решение уже сегодня и повысьте эффективность вашего туристического бизнеса!</h2>
+                <a href="https://wa.me/5588997889999" target="_blank" class="bg-white text-blue-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-100 transition duration-300 transform hover:scale-105 inline-block">Узнать больше</a>
+            </div>
+        </div>
+
+        <!-- Thai Content -->
+        <div id="lang-th" class="language-content hidden">
+            <h1 class="text-5xl font-extrabold text-center text-blue-800 mb-8 leading-tight">การนำเสนอโซลูชันสำหรับบริษัทท่องเที่ยวในประเทศไทย</h1>
+            <p class="text-2xl text-center text-gray-700 mb-12">แพลตฟอร์มนวัตกรรมสำหรับการจัดการการขนส่งนักท่องเที่ยว</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card bg-gradient-to-br from-blue-50 to-indigo-100">
+                    <h2 class="subsection-title text-blue-700">มันคืออะไร?</h2>
+                    <p class="text-lg text-gray-800 mb-4">โซลูชันของเราคือบริการเว็บขั้นสูงที่ออกแบบมาโดยเฉพาะสำหรับบริษัทท่องเที่ยวในประเทศไทยที่ต้องการเพิ่มประสิทธิภาพและปรับปรุงการดำเนินงานด้านการขนส่งนักท่องเที่ยว เรานำเสนอเครื่องมือที่ครอบคลุมสำหรับการจัดการยานพาหนะและเรือขนส่งทั้งหมดแบบเรียลไทม์ได้อย่างมีประสิทธิภาพ</p>
+                    <p class="text-lg text-gray-800">แพลตฟอร์มนี้ช่วยให้เกิดการทำงานร่วมกันอย่างราบรื่นระหว่างคนขับ/กัปตัน ผู้ปฏิบัติงาน/ผู้ดูแลระบบ และนักท่องเที่ยว โดยมีเครื่องมือที่จำเป็นสำหรับแต่ละฝ่ายเพื่อเพิ่มความโปร่งใส ความปลอดภัย และคุณภาพการบริการ ไม่ใช่แค่ระบบติดตามเท่านั้น แต่เป็นโซลูชันที่สมบูรณ์สำหรับการวางแผน การควบคุม และการวิเคราะห์กระบวนการขนส่ง ซึ่งช่วยลดต้นทุนการดำเนินงานได้อย่างมาก และเพิ่มความพึงพอใจของลูกค้า</p>
+                </div>
+                <div class="card bg-gradient-to-br from-green-50 to-teal-100">
+                    <h2 class="subsection-title text-green-700">มันทำงานอย่างไร?</h2>
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-gray-700 mb-2">สำหรับคนขับและกัปตัน:</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>คนขับหรือกัปตันใช้โทรศัพท์ทำงานที่ได้รับมา ซึ่งเชื่อมต่อกับเครื่องชาร์จของยานพาหนะ</li>
+                            <li>เปิดเบราว์เซอร์ ไปที่เว็บไซต์ และป้อนชื่อของตน</li>
+                            <li>บริการจะกำหนดตำแหน่งโดยอัตโนมัติและแสดงเส้นทาง</li>
+                            <li>ผู้ใช้จะเห็น:
+                                <ul class="list-circle list-inside ml-4">
+                                    <li>ตำแหน่งปัจจุบันบนแผนที่</li>
+                                    <li>จุดหมายถัดไปในเส้นทาง</li>
+                                    <li>เวลาที่คาดว่าจะมาถึง</li>
+                                    <li>ข้อมูลเกี่ยวกับนักท่องเที่ยวที่จะต้องรับ</li>
+                                    <li>ปุ่ม SOS สำหรับสถานการณ์ฉุกเฉิน</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-gray-700 mb-2">สำหรับผู้ปฏิบัติงานและผู้ดูแลระบบ:</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>เข้าถึงแผนที่แบบโต้ตอบของยานพาหนะทั้งหมด</li>
+                            <li>มองเห็นสถานะปัจจุบันของคนขับหรือกัปตันแต่ละคน: ตรงเวลาหรือล่าช้า</li>
+                            <li>ความสามารถในการติดตามการเบี่ยงเบนจากเส้นทาง</li>
+                            <li>สถิติฉบับสมบูรณ์สำหรับพนักงานแต่ละคน (เวลามาถึง, ความแม่นยำในการปฏิบัติตามเส้นทาง)</li>
+                            <li>ระบบโบนัสและบทลงโทษตามสถิติ</li>
+                            <li>ความสามารถในการประเมินพนักงานในช่วงทดลองงาน</li>
+                            <li>รายงานและการวิเคราะห์ปกติโดยอัตโนมัติ</li>
+                            <li>การแสดงข้อมูลเพื่อการตัดสินใจ</li>
+                            <li>ความเป็นไปได้ในการรวมเข้ากับ CRM และระบบอื่น ๆ</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-700 mb-2">สำหรับนักท่องเที่ยว:</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>การแจ้งเตือนอัตโนมัติเกี่ยวกับการเข้าใกล้ของยานพาหนะ</li>
+                            <li>ข้อมูลเกี่ยวกับคนขับหรือกัปตัน หมายเลขยานพาหนะ และเวลาที่คาดว่าจะมาถึง</li>
+                            <li>ความสามารถในการแสดงความคิดเห็นหรือข้อเสนอแนะเกี่ยวกับคนขับหรือกัปตันผ่านรหัส QR</li>
+                            <li><strong class="text-red-600">ความสามารถในการยื่นเรื่องร้องเรียนต่อคนขับได้ตลอดเวลาในระหว่างการเดินทางผ่านรหัส QR</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card bg-gradient-to-br from-purple-50 to-pink-100">
+                <h2 class="subsection-title text-purple-700">คุณสมบัติเพิ่มเติม:</h2>
+                <ul class="list-disc list-inside text-lg text-gray-800 space-y-2">
+                    <li>รองรับหลายภาษาเพื่อความสะดวกของผู้ใช้จากประเทศต่างๆ</li>
+                    <li>ระบบข้อเสนอแนะผ่านรหัส QR สำหรับการให้คะแนนและความคิดเห็นจากนักท่องเที่ยว (เช่น คุณภาพการขับขี่ พฤติกรรมคนขับ และข้อสังเกตอื่น ๆ)</li>
+                    <li><strong class="text-red-600">ระบบร้องเรียนแบบเรียลไทม์ผ่านรหัส QR ที่นักท่องเที่ยวสามารถเข้าถึงได้ระหว่างการเดินทาง</strong></li>
+                    <li>การรวบรวมสถิติข้อเสนอแนะและข้อร้องเรียนของนักท่องเที่ยวเพื่อปรับปรุงระดับการบริการ</li>
+                </ul>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card bg-gradient-to-br from-yellow-50 to-orange-100">
+                    <h2 class="subsection-title text-orange-700">ข้อดี:</h2>
+                    <ul class="list-disc list-inside text-lg text-gray-800 space-y-2">
+                        <li>ใช้งานง่าย (ไม่ต้องติดตั้งแอปพลิเคชันเพิ่มเติม)</li>
+                        <li>ควบคุมได้อย่างเต็มที่และปรับปรุงการวางแผนเส้นทาง</li>
+                        <li>เพิ่มความพึงพอใจของนักท่องเที่ยว</li>
+                        <li>ปรับปรุงประสิทธิภาพการจัดการพนักงาน</li>
+                        <li>ลดค่าใช้จ่ายและปรับปรุงคุณภาพการบริการ</li>
+                        <li>เพิ่มความปลอดภัยและการตอบสนองอย่างรวดเร็วต่อสถานการณ์ฉุกเฉิน</li>
+                    </ul>
+                </div>
+                <div class="card bg-gradient-to-br from-red-50 to-pink-100">
+                    <h2 class="subsection-title text-red-700">ทำไมถึงเลือกเรา:</h2>
+                    <ul class="list-disc list-inside text-lg text-gray-800 space-y-2">
+                        <li>ความยืดหยุ่นและความน่าเชื่อถือของโซลูชัน</li>
+                        <li>ข้อกำหนดขั้นต่ำในการเริ่มต้น</li>
+                        <li>เข้าถึงได้จากทุกอุปกรณ์</li>
+                        <li>การสนับสนุนและการฝึกอบรมพนักงาน</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center mt-12 p-8 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-xl shadow-lg">
+                <h2 class="text-3xl font-bold mb-4">Начните использовать наше решение уже сегодня и повысьте эффективность вашего туристического бизнеса!</h2>
+                <a href="https://wa.me/5588997889999" target="_blank" class="bg-white text-blue-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-100 transition duration-300 transform hover:scale-105 inline-block">เรียนรู้เพิ่มเติม</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to show the selected language content and update active button
+        // 'buttonElement' is passed when a button is clicked, otherwise it's undefined (for initial load)
+        function showLanguage(lang, buttonElement) {
+            // Get all language content divs
+            const contents = document.querySelectorAll('.language-content');
+            // Hide all content divs
+            contents.forEach(content => {
+                content.classList.add('hidden');
+            });
+
+            // Show the selected language content div
+            document.getElementById('lang-' + lang).classList.remove('hidden');
+
+            // Get all language buttons
+            const buttons = document.querySelectorAll('.language-button');
+            // Remove 'active' class from all buttons
+            buttons.forEach(button => {
+                button.classList.remove('active');
+            });
+
+            // Add 'active' class to the clicked button or the one corresponding to the language
+            if (buttonElement) {
+                buttonElement.classList.add('active');
+            } else {
+                // If no button element is passed (e.g., on initial load), find the button for the current language
+                const targetButton = Array.from(buttons).find(btn => {
+                    if (lang === 'ru') return btn.textContent.includes('Русский');
+                    if (lang === 'en') return btn.textContent.includes('English');
+                    if (lang === 'tr') return btn.textContent.includes('Türkçe');
+                    if (lang === 'th') return btn.textContent.includes('ไทย');
+                    return false;
+                });
+                if (targetButton) {
+                    targetButton.classList.add('active');
+                }
+            }
+        }
+
+        // Initialize with English content shown on DOMContentLoaded
+        document.addEventListener('DOMContentLoaded', () => {
+            showLanguage('en'); // Call without a buttonElement to set initial state
+        });
+    </script>
+</body>
+</html>
