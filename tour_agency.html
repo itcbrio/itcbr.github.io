@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solution Presentation for Tourism Companies</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts - Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -74,7 +72,6 @@
 </head>
 <body>
     <div class="container">
-        <!-- Language Selector -->
         <div class="flex justify-center space-x-4 mb-8">
             <button class="language-button" onclick="showLanguage('en', this)">English</button>
             <button class="language-button" onclick="showLanguage('tr', this)">Türkçe</button>
@@ -82,7 +79,6 @@
             <button class="language-button" onclick="showLanguage('th', this)">ไทย</button>
         </div>
 
-        <!-- English Content -->
         <div id="lang-en" class="language-content">
             <h1 class="text-5xl font-extrabold text-center text-blue-800 mb-8 leading-tight">Manage Buses and Boats Online. Reduce Delays by 40% in the First Month</h1>
             <p class="text-2xl text-center text-gray-700 mb-12">Innovative Platform for Tourist Transportation Management</p>
@@ -139,7 +135,7 @@
                             <li>Automatic notifications about approaching transport.</li>
                             <li>Information about the driver or captain, vehicle number, and arrival time.</li>
                             <li>Ability to leave a review or comment about the driver or captain via QR code.</li>
-                            <li><strong class="text-red-600">Ability to file a complaint against the driver at any point during the trip via QR code.</strong></li>
+                            <li>Ability to file a complaint against the driver at any point during the trip via QR code.</li>
                         </ul>
                     </div>
                 </div>
@@ -150,7 +146,6 @@
                 <ul class="list-disc list-inside text-lg text-gray-800 space-y-2">
                     <li>Multilingual support for the convenience of users from different countries.</li>
                     <li>Feedback system via QR code for ratings and comments from tourists (e.g., driving quality, driver behavior, and other remarks).</li>
-                    <li><strong class="text-red-600">Real-time complaint system via QR code, accessible to tourists during the trip.</strong></li>
                     <li>Collection of tourist feedback and complaint statistics to improve service levels.</li>
                 </ul>
             </div>
@@ -184,7 +179,6 @@
             </div>
         </div>
 
-        <!-- Turkish Content -->
         <div id="lang-tr" class="language-content hidden">
             <h1 class="text-5xl font-extrabold text-center text-blue-800 mb-8 leading-tight">Otobüs ve Tekne Taşımacılığını Çevrimiçi Yönetin. İlk Ayda Gecikmeleri %40 Azaltın</h1>
             <p class="text-2xl text-center text-gray-700 mb-12">Turist Taşımacılığı Yönetimi için Yenilikçi Platform</p>
@@ -241,7 +235,7 @@
                             <li>Yaklaşan ulaşım hakkında otomatik bildirimler.</li>
                             <li>Sürücü veya kaptan, araç numarası ve tahmini varış süresi hakkında bilgi.</li>
                             <li>QR kodu aracılığıyla sürücü veya kaptan hakkında yorum veya geri bildirim bırakma yeteneği.</li>
-                            <li><strong class="text-red-600">QR kodu aracılığıyla seyahat sırasında sürücüye karşı şikayette bulunma yeteneği.</strong></li>
+                            <li>QR kodu aracılığıyla seyahat sırasında sürücüye karşı şikayette bulunma yeteneği.</li>
                         </ul>
                     </div>
                 </div>
@@ -252,7 +246,6 @@
                 <ul class="list-disc list-inside text-lg text-gray-800 space-y-2">
                     <li>Farklı ülkelerden kullanıcıların rahatlığı için çok dilli destek.</li>
                     <li>Turistlerden gelen derecelendirmeler ve yorumlar için QR kodu aracılığıyla geri bildirim sistemi (örn. sürüş kalitesi, sürücü davranışı ve diğer açıklamalar).</li>
-                    <li><strong class="text-red-600">Seyahat sırasında turistlerin erişebileceği, QR kodu aracılığıyla gerçek zamanlı şikayet sistemi.</strong></li>
                     <li>Hizmet seviyesini iyileştirmek için turist geri bildirim ve şikayet istatistiklerinin toplanması.</li>
                 </ul>
             </div>
@@ -286,7 +279,6 @@
             </div>
         </div>
 
-        <!-- Russian Content -->
         <div id="lang-ru" class="language-content hidden">
             <h1 class="text-5xl font-extrabold text-center text-blue-800 mb-8 leading-tight">Управляйте автобусами и катерами онлайн. Сократите задержки на 40 % уже в первый месяц</h1>
             <p class="text-2xl text-center text-gray-700 mb-12">Инновационная платформа для управления перевозками туристов</p>
@@ -309,41 +301,33 @@
                     <div class="mb-6">
                         <h3 class="text-xl font-semibold text-gray-700 mb-2">Для водителей и капитанов:</h3>
                         <ul class="list-disc list-inside text-gray-600 space-y-1">
-                            <li>Водитель или капитан использует предоставленный рабочий телефон, подключённый к зарядке транспорта.</li>
-                            <li>Открывает браузер, переходит на сайт и вводит своё имя.</li>
-                            <li>Сервис автоматически определяет местоположение и отображает маршрут.</li>
-                            <li>Пользователь видит:
-                                <ul class="list-circle list-inside ml-4">
-                                    <li>текущее положение на карте,</li>
-                                    <li>следующую точку маршрута,</li>
-                                    <li>время до прибытия,</li>
-                                    <li>информацию о туристах, которых необходимо забрать.</li>
-                                    <li>кнопку SOS для экстренных ситуаций.</li>
-                                </ul>
-                            </li>
+                            <li>Работает на любом служебном телефоне — запуск без покупки нового оборудования.</li>
+                            <li>Старт за 30 секунд: открыл браузер → поехал, без установки приложений.</li>
+                            <li>Маршрут строится сам — экономия до 15 мин на каждом рейсе.</li>
+                            <li>Водитель знает следующий шаг, ETA и список пассажиров; SOS-кнопка отправляет координаты за 1 сек — безопасность 24/7.</li>
                         </ul>
                     </div>
                     <div class="mb-6">
                         <h3 class="text-xl font-semibold text-gray-700 mb-2">Для операторов и администраторов:</h3>
                         <ul class="list-disc list-inside text-gray-600 space-y-1">
-                            <li>Доступ к интерактивной карте всех транспортных средств.</li>
-                            <li>Видимость текущего статуса каждого водителя или капитана: вовремя или с опозданием.</li>
-                            <li>Возможность отслеживать отклонения от маршрута.</li>
-                            <li>Полная статистика по каждому сотруднику (время прибытия, точность следования маршруту).</li>
-                            <li>Система бонусов и штрафов на основе статистики.</li>
-                            <li>Возможность оценки сотрудников во время испытательного срока.</li>
-                            <li>Автоматические регулярные отчёты и аналитика.</li>
-                            <li>Визуализация данных для принятия решений.</li>
-                            <li>Возможность интеграции с CRM и другими системами.</li>
+                            <li>Вся техника на одной карте — диспетчер тратит &lt; 30 сек, чтобы увидеть, где каждый автобус или катер.</li>
+                            <li>Система сама подсвечивает опоздания — снижайте задержки рейсов до 40 %.</li>
+                            <li>Отклонение от маршрута = push-сигнал диспетчеру — экономия до 30 мин/рейс.</li>
+                            <li>Чёткие KPI водителей: кто приносит прибыль, а не штрафы → до 20 % сокращения расходов.</li>
+                            <li>Автоматический рейтинг мотивирует команду без ручного контроля — дисциплина ↑ уже в 1-й месяц.</li>
+                            <li>Решайте о найме за 2 недели, а не за 2 месяца: данные сразу показывают надёжность новичка.</li>
+                            <li>Отчёты приходят сами — экономия до 4 часов менеджерского времени в неделю.</li>
+                            <li>Интерактивные графики сразу показывают узкие места — решения принимаются за минуты, не часы.</li>
+                            <li>Данные автоматически летят в CRM — никакого двойного ввода и ошибок, экономия до 15 % времени офиса.</li>
                         </ul>
                     </div>
                     <div>
                         <h3 class="text-xl font-semibold text-gray-700 mb-2">Для туристов:</h3>
                         <ul class="list-disc list-inside text-gray-600 space-y-1">
-                            <li>Автоматические уведомления о приближении транспорта.</li>
-                            <li>Информация о водителе или капитане, номере транспорта и времени прибытия.</li>
-                            <li>Возможность оставить отзыв или комментарий о водителе или капитане с помощью QR-кода.</li>
-                            <li><strong class="text-red-600">Возможность подать жалобу на водителя в любой момент поездки с помощью QR-кода.</strong></li>
+                            <li>Туристы получают точное время прибытия — на 30 % меньше звонков в офис.</li>
+                            <li>Прозрачность поездки: имя водителя и номер автобуса в WhatsApp — меньше путаницы на посадке.</li>
+                            <li>Оценка в 2 клика — собирайте рейтинг 4,8+ и повышайте лояльность гостей.</li>
+                            <li>Жалоба поступает в систему в реальном времени — конфликт решён до конца поездки.</li>
                         </ul>
                     </div>
                 </div>
@@ -354,7 +338,6 @@
                 <ul class="list-disc list-inside text-lg text-gray-800 space-y-2">
                     <li>Поддержка мультиязычности для удобства пользователей из разных стран.</li>
                     <li>Система обратной связи через QR-код для оценки и комментариев от туристов (например, качество вождения, поведение водителя и другие замечания).</li>
-                    <li><strong class="text-red-600">Система подачи жалоб в реальном времени через QR-код, доступная туристам во время поездки.</strong></li>
                     <li>Сбор статистики по отзывам и жалобам туристов для повышения уровня сервиса.</li>
                 </ul>
             </div>
@@ -363,21 +346,21 @@
                 <div class="card bg-gradient-to-br from-yellow-50 to-orange-100">
                     <h2 class="subsection-title text-orange-700">Преимущества:</h2>
                     <ul class="list-disc list-inside text-lg text-gray-800 space-y-2">
-                        <li>Простота использования (без установки дополнительных приложений).</li>
-                        <li>Полный контроль и улучшение планирования маршрутов.</li>
-                        <li>Повышение удовлетворенности туристов.</li>
-                        <li>Улучшение эффективности управления сотрудниками.</li>
-                        <li>Снижение расходов и повышение качества сервиса.</li>
-                        <li>Усиление безопасности и оперативная реакция на экстренные ситуации.</li>
+                        <li>Запуск за 5 минут: работает прямо в браузере.</li>
+                        <li>До –25 % холостых пробегов благодаря умному планированию.</li>
+                        <li>Рейтинг экскурсии растёт до 4,8★ уже в первый месяц.</li>
+                        <li>KPI видны онлайн — текучка снижается на треть.</li>
+                        <li>–20 % затрат на топливо и штрафы без потери качества.</li>
+                        <li>SOS-сигнал мгновенно передаёт координаты и фото — время реакции &lt; 60 сек.</li>
                     </ul>
                 </div>
                 <div class="card bg-gradient-to-br from-red-50 to-pink-100">
                     <h2 class="subsection-title text-red-700">Почему выбирают нас:</h2>
                     <ul class="list-disc list-inside text-lg text-gray-800 space-y-2">
-                        <li>Гибкость и надёжность решения.</li>
-                        <li>Минимальные требования для начала работы.</li>
-                        <li>Доступность с любого устройства.</li>
-                        <li>Поддержка и обучение персонала.</li>
+                        <li>99,9 % аптайма — платформа работает даже при слабом интернете.</li>
+                        <li>Стартуйте завтра: нужен только телефон и интернет.</li>
+                        <li>ПК, планшет или смартфон — данные синхронизируются мгновенно.</li>
+                        <li>Мы обучаем за 1 час и помогаем 24/7 — минимум вопросов в первые недели.</li>
                     </ul>
                 </div>
             </div>
@@ -388,7 +371,6 @@
             </div>
         </div>
 
-        <!-- Thai Content -->
         <div id="lang-th" class="language-content hidden">
             <h1 class="text-5xl font-extrabold text-center text-blue-800 mb-8 leading-tight">จัดการรถบัสและเรือออนไลน์ ลดความล่าช้า 40% ในเดือนแรก</h1>
             <p class="text-2xl text-center text-gray-700 mb-12">แพลตฟอร์มนวัตกรรมสำหรับการจัดการการขนส่งนักท่องเที่ยว</p>
@@ -445,7 +427,7 @@
                             <li>การแจ้งเตือนอัตโนมัติเกี่ยวกับการเข้าใกล้ของยานพาหนะ</li>
                             <li>ข้อมูลเกี่ยวกับคนขับหรือกัปตัน หมายเลขยานพาหนะ และเวลาที่คาดว่าจะมาถึง</li>
                             <li>ความสามารถในการแสดงความคิดเห็นหรือข้อเสนอแนะเกี่ยวกับคนขับหรือกัปตันผ่านรหัส QR</li>
-                            <li><strong class="text-red-600">ความสามารถในการยื่นเรื่องร้องเรียนต่อคนขับได้ตลอดเวลาในระหว่างการเดินทางผ่านรหัส QR</strong></li>
+                            <li>ความสามารถในการยื่นเรื่องร้องเรียนต่อคนขับได้ตลอดเวลาในระหว่างการเดินทางผ่านรหัส QR</li>
                         </ul>
                     </div>
                 </div>
@@ -456,7 +438,6 @@
                 <ul class="list-disc list-inside text-lg text-gray-800 space-y-2">
                     <li>รองรับหลายภาษาเพื่อความสะดวกของผู้ใช้จากประเทศต่างๆ</li>
                     <li>ระบบข้อเสนอแนะผ่านรหัส QR สำหรับการให้คะแนนและความคิดเห็นจากนักท่องเที่ยว (เช่น คุณภาพการขับขี่ พฤติกรรมคนขับ และข้อสังเกตอื่น ๆ)</li>
-                    <li><strong class="text-red-600">ระบบร้องเรียนแบบเรียลไทม์ผ่านรหัส QR ที่นักท่องเที่ยวสามารถเข้าถึงได้ระหว่างการเดินทาง</strong></li>
                     <li>การรวบรวมสถิติข้อเสนอแนะและข้อร้องเรียนของนักท่องเที่ยวเพื่อปรับปรุงระดับการบริการ</li>
                 </ul>
             </div>
@@ -485,7 +466,7 @@
             </div>
 
             <div class="text-center mt-12 p-8 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-xl shadow-lg">
-                <h2 class="text-3xl font-bold mb-4">Начните использовать наше решение уже сегодня и повысьте эффективность вашего туристического бизнеса!</h2>
+                <h2 class="text-3xl font-bold mb-4">Начнитеใช้โซลูชันของเราวันนี้และเพิ่มประสิทธิภาพธุรกิจการท่องเที่ยวของคุณ!</h2>
                 <a href="https://wa.me/5588997889999" target="_blank" class="bg-white text-blue-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-100 transition duration-300 transform hover:scale-105 inline-block">เรียนรู้เพิ่มเติม</a>
             </div>
         </div>
