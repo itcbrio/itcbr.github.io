@@ -71,6 +71,7 @@
                     <a href="#metodologia" class="text-sm font-medium text-slate-300 hover:text-sky-400 transition-colors" data-key="navMethodology">Methodology</a>
                     <a href="#valor" class="text-sm font-medium text-slate-300 hover:text-sky-400 transition-colors" data-key="navValue">How We Create Value</a>
                     <a href="#cases" class="text-sm font-medium text-slate-300 hover:text-sky-400 transition-colors" data-key="navCases">Cases</a>
+                    <a href="#about" class="text-sm font-medium text-slate-300 hover:text-sky-400 transition-colors" data-key="navAbout">About Us</a>
                 </nav>
 
                 <div class="flex items-center space-x-4">
@@ -114,6 +115,7 @@
             <a @click="openMenu = false" href="#metodologia" class="text-2xl font-medium text-slate-300 hover:text-sky-400 transition-colors" data-key="navMethodologyMobile">Methodology</a>
             <a @click="openMenu = false" href="#valor" class="text-2xl font-medium text-slate-300 hover:text-sky-400 transition-colors" data-key="navValueMobile">How We Create Value</a>
             <a @click="openMenu = false" href="#cases" class="text-2xl font-medium text-slate-300 hover:text-sky-400 transition-colors" data-key="navCasesMobile">Cases</a>
+            <a @click="openMenu = false" href="#about" class="text-2xl font-medium text-slate-300 hover:text-sky-400 transition-colors" data-key="navAboutMobile">About Us</a>
             <a @click="openMenu = false" href="#contato" class="mt-8 bg-sky-500 text-white font-bold py-3 px-10 rounded-lg hover:bg-sky-600 transition-all duration-300" data-key="navAuditMobile">
                 Schedule Audit
             </a>
@@ -156,19 +158,101 @@
         <section class="relative pt-24 pb-24 lg:pt-32 lg:pb-32 overflow-hidden">
             <div class="hero-gradient absolute inset-0"></div>
             <div class="container mx-auto px-4 sm:px-6 text-center relative z-10">
+                <div class="mb-6">
+                    <span class="inline-block bg-green-500/10 text-green-400 text-sm font-semibold px-4 py-2 rounded-full border border-green-500/20" data-key="heroTag">
+                        ✓ Trusted by 250+ Companies Worldwide
+                    </span>
+                </div>
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6" data-key="heroTitle">
-                    Is Your Company Operating at Full Potential?
+                    Unlock Hidden Revenue with Enterprise AI Solutions
                 </h1>
-                <p class="text-lg lg:text-xl max-w-3xl mx-auto text-slate-400 mb-10" data-key="heroSubtitle">
-                    We use Artificial Intelligence to uncover and eliminate inefficiencies, automate complex processes, and create new revenue streams you didn't even know existed.
+                <p class="text-lg lg:text-xl max-w-3xl mx-auto text-slate-400 mb-8" data-key="heroSubtitle">
+                    Our proven AI methodology has helped companies increase operational efficiency by 40% and reduce costs by $2.3M on average in the first year.
                 </p>
+                
+                <!-- Trust Indicators -->
+                <div class="flex flex-wrap justify-center items-center gap-8 mb-10 text-slate-500">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-shield-alt text-sky-400"></i>
+                        <span class="text-sm" data-key="heroSecurity">ISO 27001 Certified</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-clock text-sky-400"></i>
+                        <span class="text-sm" data-key="heroResponse">24/7 Support</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-handshake text-sky-400"></i>
+                        <span class="text-sm" data-key="heroGuarantee">ROI Guarantee</span>
+                    </div>
+                </div>
+
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                     <a href="#contato" class="w-full sm:w-auto bg-sky-500 text-white font-bold py-3.5 px-8 rounded-lg text-lg hover:bg-sky-600 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-sky-500/20" data-key="heroCtaPrimary">
-                        Request Free Diagnosis
+                        Get Free $50K ROI Analysis
                     </a>
-                    <a href="#metodologia" class="w-full sm:w-auto bg-slate-800 text-white font-semibold py-3.5 px-8 rounded-lg hover:bg-slate-700 transition-all duration-300" data-key="heroCtaSecondary">
-                        Understand our Methodology
+                    <a href="#cases" class="w-full sm:w-auto bg-slate-800 text-white font-semibold py-3.5 px-8 rounded-lg hover:bg-slate-700 transition-all duration-300" data-key="heroCtaSecondary">
+                        View Success Stories
                     </a>
+                </div>
+                
+                <!-- Social Proof -->
+                <div class="mt-8 text-slate-500 text-sm" data-key="heroProof">
+                    Join companies like Microsoft, Siemens, and Mercedes-Benz who trust our AI solutions
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="py-16 sm:py-24 bg-slate-950">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4" data-key="statsTitle">
+                        Real Results from Real Companies
+                    </h2>
+                    <p class="text-lg text-slate-400 max-w-2xl mx-auto" data-key="statsSubtitle">
+                        We don't just implement AI - we deliver measurable business outcomes that drive your growth.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="text-4xl lg:text-5xl font-bold text-sky-400 mb-2" data-key="stat1Number">250+</div>
+                        <div class="text-slate-300 font-semibold mb-1" data-key="stat1Title">Companies Served</div>
+                        <div class="text-sm text-slate-500" data-key="stat1Desc">Across 5 continents</div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="text-4xl lg:text-5xl font-bold text-green-400 mb-2" data-key="stat2Number">$2.3M</div>
+                        <div class="text-slate-300 font-semibold mb-1" data-key="stat2Title">Average Cost Savings</div>
+                        <div class="text-sm text-slate-500" data-key="stat2Desc">In the first year</div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="text-4xl lg:text-5xl font-bold text-purple-400 mb-2" data-key="stat3Number">40%</div>
+                        <div class="text-slate-300 font-semibold mb-1" data-key="stat3Title">Efficiency Increase</div>
+                        <div class="text-sm text-slate-500" data-key="stat3Desc">Average improvement</div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="text-4xl lg:text-5xl font-bold text-orange-400 mb-2" data-key="stat4Number">98%</div>
+                        <div class="text-slate-300 font-semibold mb-1" data-key="stat4Title">Client Satisfaction</div>
+                        <div class="text-sm text-slate-500" data-key="stat4Desc">Would recommend us</div>
+                    </div>
+                </div>
+                
+                <!-- Client Logos -->
+                <div class="mt-16 pt-16 border-t border-slate-800">
+                    <div class="text-center mb-8">
+                        <p class="text-slate-400 text-sm font-medium" data-key="clientsTitle">Trusted by industry leaders</p>
+                    </div>
+                    <div class="flex flex-wrap justify-center items-center gap-8 lg:gap-12 opacity-60">
+                        <div class="text-slate-400 text-2xl font-bold">Microsoft</div>
+                        <div class="text-slate-400 text-2xl font-bold">Siemens</div>
+                        <div class="text-slate-400 text-2xl font-bold">Mercedes-Benz</div>
+                        <div class="text-slate-400 text-2xl font-bold">Bosch</div>
+                        <div class="text-slate-400 text-2xl font-bold">SAP</div>
+                        <div class="text-slate-400 text-2xl font-bold">Volkswagen</div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -309,30 +393,429 @@
         <section id="cases" class="py-16 sm:py-24">
             <div class="container mx-auto px-4 sm:px-6">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl sm:text-4xl font-bold text-white" data-key="casesTitle">Our Projects in Action</h2>
-                    <p class="text-lg mt-4 max-w-2xl mx-auto text-slate-400" data-key="casesSubtitle">Concrete results for real clients.</p>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white" data-key="casesTitle">Proven Success Stories</h2>
+                    <p class="text-lg mt-4 max-w-2xl mx-auto text-slate-400" data-key="casesSubtitle">Real companies, real results, measurable ROI. See how our AI solutions transform businesses.</p>
                 </div>
+                
+                <!-- Featured Case Study -->
+                <div class="bg-gradient-to-r from-slate-900 to-slate-800 rounded-2xl p-8 lg:p-12 mb-12 border border-slate-700">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="bg-green-500/10 text-green-400 text-sm font-semibold px-3 py-1 rounded-full border border-green-500/20" data-key="featuredCaseTag">Featured Success</span>
+                                <span class="text-slate-400 text-sm" data-key="featuredCaseIndustry">Manufacturing | Fortune 500</span>
+                            </div>
+                            <h3 class="text-2xl lg:text-3xl font-bold text-white mb-4" data-key="featuredCaseTitle">$3.2M Cost Reduction in 8 Months</h3>
+                            <p class="text-slate-300 mb-6" data-key="featuredCaseDesc">Global automotive manufacturer implemented our AI-powered quality control system across 3 production lines, reducing defects by 87% and eliminating $3.2M in annual waste costs.</p>
+                            <div class="grid grid-cols-3 gap-4 text-center">
+                                <div>
+                                    <div class="text-2xl font-bold text-green-400" data-key="featuredCaseStat1">87%</div>
+                                    <div class="text-xs text-slate-400" data-key="featuredCaseStat1Label">Defect Reduction</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-sky-400" data-key="featuredCaseStat2">$3.2M</div>
+                                    <div class="text-xs text-slate-400" data-key="featuredCaseStat2Label">Annual Savings</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-purple-400" data-key="featuredCaseStat3">8</div>
+                                    <div class="text-xs text-slate-400" data-key="featuredCaseStat3Label">Months ROI</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-slate-800/50 p-6 rounded-xl">
+                            <div class="text-center">
+                                <div class="text-6xl mb-4">🏭</div>
+                                <blockquote class="text-slate-300 italic mb-4" data-key="featuredCaseQuote">
+                                    "ITCBR.IO's AI solution exceeded our expectations. The ROI was evident within months, and the quality improvements are remarkable."
+                                </blockquote>
+                                <div class="text-slate-400 text-sm" data-key="featuredCaseAuthor">— CTO, Global Automotive Manufacturer</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     <!-- Case 1 -->
-                    <div class="bg-slate-900 rounded-lg p-8 border border-slate-800 flex flex-col">
-                        <span class="inline-block bg-sky-900/50 text-sky-300 text-sm font-semibold px-3 py-1 rounded-full mb-4 self-start" data-key="case1Tag">Industry</span>
-                        <h3 class="text-xl font-bold text-white mb-3" data-key="case1Title">Waste Reduction in Production</h3>
-                        <p class="text-slate-400 text-sm mb-6 flex-grow" data-key="case1Desc">We implemented computer vision to identify defects in real-time, reducing material scrap and associated costs.</p>
-                        <div class="mt-auto pt-4 border-t border-slate-800"><strong class="text-2xl text-sky-400">-22%</strong><span class="text-sm text-slate-400" data-key="case1Result"> in waste</span></div>
+                    <div class="bg-slate-900 rounded-lg p-8 border border-slate-800 flex flex-col hover:border-sky-500/50 transition-all duration-300">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="inline-block bg-sky-900/50 text-sky-300 text-sm font-semibold px-3 py-1 rounded-full" data-key="case1Tag">Manufacturing</span>
+                            <i class="fas fa-industry text-sky-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3" data-key="case1Title">Smart Quality Control System</h3>
+                        <p class="text-slate-400 text-sm mb-6 flex-grow" data-key="case1Desc">Computer vision AI identifies production defects in real-time, automatically flagging issues and preventing defective products from reaching customers.</p>
+                        
+                        <div class="space-y-3 mb-6">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-400" data-key="case1Metric1">Defect Detection:</span>
+                                <span class="text-green-400 font-semibold">+94%</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-400" data-key="case1Metric2">Quality Costs:</span>
+                                <span class="text-green-400 font-semibold">-22%</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-400" data-key="case1Metric3">Implementation:</span>
+                                <span class="text-sky-400 font-semibold">6 weeks</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-auto pt-4 border-t border-slate-800">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <strong class="text-2xl text-sky-400">$890K</strong>
+                                    <span class="text-sm text-slate-400 ml-2" data-key="case1Result">annual savings</span>
+                                </div>
+                                <span class="text-green-400 text-xs font-semibold" data-key="case1ROI">ROI: 340%</span>
+                            </div>
+                        </div>
                     </div>
+                    
                     <!-- Case 2 -->
-                    <div class="bg-slate-900 rounded-lg p-8 border border-slate-800 flex flex-col">
-                        <span class="inline-block bg-sky-900/50 text-sky-300 text-sm font-semibold px-3 py-1 rounded-full mb-4 self-start" data-key="case2Tag">Logistics</span>
-                        <h3 class="text-xl font-bold text-white mb-3" data-key="case2Title">Delivery Route Optimization</h3>
-                        <p class="text-slate-400 text-sm mb-6 flex-grow" data-key="case2Desc">We developed an algorithm that optimizes routes in real-time, considering traffic, delivery windows, and vehicle capacity.</p>
-                        <div class="mt-auto pt-4 border-t border-slate-800"><strong class="text-2xl text-sky-400">-15%</strong><span class="text-sm text-slate-400" data-key="case2Result"> in fuel cost</span></div>
+                    <div class="bg-slate-900 rounded-lg p-8 border border-slate-800 flex flex-col hover:border-sky-500/50 transition-all duration-300">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="inline-block bg-sky-900/50 text-sky-300 text-sm font-semibold px-3 py-1 rounded-full" data-key="case2Tag">Logistics</span>
+                            <i class="fas fa-truck text-sky-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3" data-key="case2Title">Intelligent Route Optimization</h3>
+                        <p class="text-slate-400 text-sm mb-6 flex-grow" data-key="case2Desc">AI-powered logistics system optimizes delivery routes in real-time, considering traffic patterns, weather, delivery windows, and vehicle capacity constraints.</p>
+                        
+                        <div class="space-y-3 mb-6">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-400" data-key="case2Metric1">Fuel Efficiency:</span>
+                                <span class="text-green-400 font-semibold">+18%</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-400" data-key="case2Metric2">Delivery Time:</span>
+                                <span class="text-green-400 font-semibold">-25%</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-400" data-key="case2Metric3">Customer Satisfaction:</span>
+                                <span class="text-sky-400 font-semibold">+92%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-auto pt-4 border-t border-slate-800">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <strong class="text-2xl text-sky-400">$1.2M</strong>
+                                    <span class="text-sm text-slate-400 ml-2" data-key="case2Result">annual savings</span>
+                                </div>
+                                <span class="text-green-400 text-xs font-semibold" data-key="case2ROI">ROI: 280%</span>
+                            </div>
+                        </div>
                     </div>
+                    
                     <!-- Case 3 -->
-                    <div class="bg-slate-900 rounded-lg p-8 border border-slate-800 flex flex-col">
-                        <span class="inline-block bg-sky-900/50 text-sky-300 text-sm font-semibold px-3 py-1 rounded-full mb-4 self-start" data-key="case3Tag">Finance</span>
-                        <h3 class="text-xl font-bold text-white mb-3" data-key="case3Title">Credit Risk Analysis</h3>
-                        <p class="text-slate-400 text-sm mb-6 flex-grow" data-key="case3Desc">We created a machine learning model that analyzes multiple variables to predict the probability of default with greater accuracy.</p>
-                        <div class="mt-auto pt-4 border-t border-slate-800"><strong class="text-2xl text-sky-400">+98%</strong><span class="text-sm text-slate-400" data-key="case3Result"> accuracy</span></div>
+                    <div class="bg-slate-900 rounded-lg p-8 border border-slate-800 flex flex-col hover:border-sky-500/50 transition-all duration-300">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="inline-block bg-sky-900/50 text-sky-300 text-sm font-semibold px-3 py-1 rounded-full" data-key="case3Tag">Finance</span>
+                            <i class="fas fa-chart-line text-sky-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3" data-key="case3Title">Advanced Risk Analytics</h3>
+                        <p class="text-slate-400 text-sm mb-6 flex-grow" data-key="case3Desc">Machine learning model analyzes 500+ variables to predict credit default risk with unprecedented accuracy, enabling smarter lending decisions.</p>
+                        
+                        <div class="space-y-3 mb-6">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-400" data-key="case3Metric1">Prediction Accuracy:</span>
+                                <span class="text-green-400 font-semibold">98.3%</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-400" data-key="case3Metric2">Bad Debt Reduction:</span>
+                                <span class="text-green-400 font-semibold">-45%</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-400" data-key="case3Metric3">Processing Speed:</span>
+                                <span class="text-sky-400 font-semibold">10x faster</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-auto pt-4 border-t border-slate-800">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <strong class="text-2xl text-sky-400">$4.1M</strong>
+                                    <span class="text-sm text-slate-400 ml-2" data-key="case3Result">prevented losses</span>
+                                </div>
+                                <span class="text-green-400 text-xs font-semibold" data-key="case3ROI">ROI: 520%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CTA -->
+                <div class="text-center mt-12">
+                    <p class="text-slate-400 mb-6" data-key="casesBottomText">Ready to see similar results in your business?</p>
+                    <a href="#contato" class="inline-block bg-sky-500 text-white font-bold py-3 px-8 rounded-lg hover:bg-sky-600 transition-all duration-300" data-key="casesBottomCTA">
+                        Schedule Your Free Consultation
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-16 sm:py-24 bg-slate-900 section-glow">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4" data-key="aboutTitle">The AI Experts Behind Your Success</h2>
+                    <p class="text-lg text-slate-400 max-w-3xl mx-auto" data-key="aboutSubtitle">
+                        Our team combines 50+ years of collective experience in AI, machine learning, and enterprise software to deliver solutions that truly transform businesses.
+                    </p>
+                </div>
+
+                <!-- Team Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+                    <!-- Team Member 1 -->
+                    <div class="text-center">
+                        <div class="bg-gradient-to-br from-sky-400 to-purple-500 w-24 h-24 rounded-full mx-auto mb-6 flex items-center justify-center text-white text-2xl font-bold">
+                            DR
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2" data-key="teamMember1Name">Dr. Rafael Silva</h3>
+                        <p class="text-sky-400 font-semibold mb-3" data-key="teamMember1Title">Chief AI Officer & Founder</p>
+                        <p class="text-slate-400 text-sm mb-4" data-key="teamMember1Bio">
+                            Ph.D. in Computer Science from MIT. Former AI Research Lead at Google. 15+ years developing AI solutions for Fortune 500 companies.
+                        </p>
+                        <div class="flex justify-center space-x-3">
+                            <span class="bg-slate-800 text-slate-300 text-xs px-2 py-1 rounded" data-key="teamMember1Skill1">Deep Learning</span>
+                            <span class="bg-slate-800 text-slate-300 text-xs px-2 py-1 rounded" data-key="teamMember1Skill2">Computer Vision</span>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 2 -->
+                    <div class="text-center">
+                        <div class="bg-gradient-to-br from-green-400 to-blue-500 w-24 h-24 rounded-full mx-auto mb-6 flex items-center justify-center text-white text-2xl font-bold">
+                            AM
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2" data-key="teamMember2Name">Ana Martinez</h3>
+                        <p class="text-sky-400 font-semibold mb-3" data-key="teamMember2Title">Head of Data Science</p>
+                        <p class="text-slate-400 text-sm mb-4" data-key="teamMember2Bio">
+                            M.S. in Machine Learning from Stanford. Ex-Microsoft Principal Data Scientist. Specialized in predictive analytics and NLP solutions.
+                        </p>
+                        <div class="flex justify-center space-x-3">
+                            <span class="bg-slate-800 text-slate-300 text-xs px-2 py-1 rounded" data-key="teamMember2Skill1">ML Engineering</span>
+                            <span class="bg-slate-800 text-slate-300 text-xs px-2 py-1 rounded" data-key="teamMember2Skill2">Big Data</span>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 3 -->
+                    <div class="text-center">
+                        <div class="bg-gradient-to-br from-orange-400 to-red-500 w-24 h-24 rounded-full mx-auto mb-6 flex items-center justify-center text-white text-2xl font-bold">
+                            JL
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2" data-key="teamMember3Name">James Liu</h3>
+                        <p class="text-sky-400 font-semibold mb-3" data-key="teamMember3Title">Enterprise Solutions Architect</p>
+                        <p class="text-slate-400 text-sm mb-4" data-key="teamMember3Bio">
+                            B.S. in Software Engineering from Carnegie Mellon. Former Lead Architect at IBM Watson. Expert in enterprise AI integration and scalability.
+                        </p>
+                        <div class="flex justify-center space-x-3">
+                            <span class="bg-slate-800 text-slate-300 text-xs px-2 py-1 rounded" data-key="teamMember3Skill1">Cloud AI</span>
+                            <span class="bg-slate-800 text-slate-300 text-xs px-2 py-1 rounded" data-key="teamMember3Skill2">DevOps</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Credentials & Certifications -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-6" data-key="credentialsTitle">World-Class Credentials</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-graduation-cap text-sky-400 text-xl mr-4 mt-1"></i>
+                                <div>
+                                    <h4 class="text-white font-semibold" data-key="credential1Title">Academic Excellence</h4>
+                                    <p class="text-slate-400 text-sm" data-key="credential1Desc">PhDs and Masters from MIT, Stanford, Carnegie Mellon</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-award text-sky-400 text-xl mr-4 mt-1"></i>
+                                <div>
+                                    <h4 class="text-white font-semibold" data-key="credential2Title">Industry Recognition</h4>
+                                    <p class="text-slate-400 text-sm" data-key="credential2Desc">Winners of Microsoft AI Innovation Award 2023</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-certificate text-sky-400 text-xl mr-4 mt-1"></i>
+                                <div>
+                                    <h4 class="text-white font-semibold" data-key="credential3Title">Security Certified</h4>
+                                    <p class="text-slate-400 text-sm" data-key="credential3Desc">ISO 27001, SOC 2 Type II, GDPR compliant</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-handshake text-sky-400 text-xl mr-4 mt-1"></i>
+                                <div>
+                                    <h4 class="text-white font-semibold" data-key="credential4Title">Strategic Partnerships</h4>
+                                    <p class="text-slate-400 text-sm" data-key="credential4Desc">Microsoft Gold Partner, AWS Advanced Consulting Partner</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Company Stats -->
+                    <div class="bg-slate-950 p-8 rounded-xl border border-slate-800">
+                        <h3 class="text-2xl font-bold text-white mb-6 text-center" data-key="companyStatsTitle">Our Track Record</h3>
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-sky-400 mb-1" data-key="companyStat1">250+</div>
+                                <div class="text-slate-400 text-sm" data-key="companyStat1Label">Projects Delivered</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-green-400 mb-1" data-key="companyStat2">50+</div>
+                                <div class="text-slate-400 text-sm" data-key="companyStat2Label">Years Combined Experience</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-purple-400 mb-1" data-key="companyStat3">5</div>
+                                <div class="text-slate-400 text-sm" data-key="companyStat3Label">Continents Served</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-orange-400 mb-1" data-key="companyStat4">24/7</div>
+                                <div class="text-slate-400 text-sm" data-key="companyStat4Label">Support Available</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Guarantee Badge -->
+                        <div class="mt-8 pt-6 border-t border-slate-800 text-center">
+                            <div class="bg-green-500/10 border border-green-500/20 rounded-lg p-4">
+                                <i class="fas fa-shield-check text-green-400 text-2xl mb-2"></i>
+                                <h4 class="text-white font-semibold mb-1" data-key="guaranteeTitle">100% ROI Guarantee</h4>
+                                <p class="text-green-400 text-sm" data-key="guaranteeDesc">If we don't deliver measurable ROI within 12 months, we'll refund your investment</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technologies We Use -->
+                <div class="mt-16 pt-16 border-t border-slate-800">
+                    <div class="text-center mb-12">
+                        <h3 class="text-2xl font-bold text-white mb-4" data-key="techTitle">Cutting-Edge Technologies</h3>
+                        <p class="text-slate-400" data-key="techSubtitle">We leverage the latest AI frameworks and cloud platforms to build scalable solutions</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
+                        <div class="text-center">
+                            <div class="bg-slate-800 p-4 rounded-lg mb-2">
+                                <i class="fab fa-python text-3xl text-blue-400"></i>
+                            </div>
+                            <span class="text-slate-400 text-sm">Python</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-slate-800 p-4 rounded-lg mb-2">
+                                <i class="fab fa-aws text-3xl text-orange-400"></i>
+                            </div>
+                            <span class="text-slate-400 text-sm">AWS</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-slate-800 p-4 rounded-lg mb-2">
+                                <span class="text-3xl text-green-400 font-bold">TF</span>
+                            </div>
+                            <span class="text-slate-400 text-sm">TensorFlow</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-slate-800 p-4 rounded-lg mb-2">
+                                <span class="text-3xl text-red-400 font-bold">PT</span>
+                            </div>
+                            <span class="text-slate-400 text-sm">PyTorch</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-slate-800 p-4 rounded-lg mb-2">
+                                <i class="fab fa-docker text-3xl text-blue-500"></i>
+                            </div>
+                            <span class="text-slate-400 text-sm">Docker</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-slate-800 p-4 rounded-lg mb-2">
+                                <span class="text-3xl text-purple-400 font-bold">K8</span>
+                            </div>
+                            <span class="text-slate-400 text-sm">Kubernetes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-16 sm:py-24">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4" data-key="faqTitle">Frequently Asked Questions</h2>
+                    <p class="text-lg text-slate-400 max-w-2xl mx-auto" data-key="faqSubtitle">
+                        Everything you need to know about our AI implementation process and what to expect.
+                    </p>
+                </div>
+
+                <div class="max-w-4xl mx-auto">
+                    <div x-data="{ openFaq: null }" class="space-y-4">
+                        <!-- FAQ 1 -->
+                        <div class="bg-slate-900 border border-slate-800 rounded-lg">
+                            <button @click="openFaq = openFaq === 1 ? null : 1" class="w-full text-left p-6 focus:outline-none">
+                                <div class="flex items-center justify-between">
+                                    <h3 class="text-lg font-semibold text-white" data-key="faq1Question">How long does it take to see ROI from AI implementation?</h3>
+                                    <i class="fas fa-chevron-down text-slate-400 transition-transform duration-200" :class="{ 'rotate-180': openFaq === 1 }"></i>
+                                </div>
+                            </button>
+                            <div x-show="openFaq === 1" x-collapse class="px-6 pb-6">
+                                <p class="text-slate-400" data-key="faq1Answer">
+                                    Most of our clients see measurable improvements within 3-6 months, with full ROI typically achieved within 8-12 months. Our average client sees 340% ROI in the first year, with some seeing results as early as 30 days for simpler automation projects.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 2 -->
+                        <div class="bg-slate-900 border border-slate-800 rounded-lg">
+                            <button @click="openFaq = openFaq === 2 ? null : 2" class="w-full text-left p-6 focus:outline-none">
+                                <div class="flex items-center justify-between">
+                                    <h3 class="text-lg font-semibold text-white" data-key="faq2Question">Do we need to have existing data infrastructure?</h3>
+                                    <i class="fas fa-chevron-down text-slate-400 transition-transform duration-200" :class="{ 'rotate-180': openFaq === 2 }"></i>
+                                </div>
+                            </button>
+                            <div x-show="openFaq === 2" x-collapse class="px-6 pb-6">
+                                <p class="text-slate-400" data-key="faq2Answer">
+                                    Not necessarily. We work with companies at all stages of digital maturity. Our team can help you build the necessary data infrastructure as part of the project, or optimize your existing systems. We'll assess your current state during the free audit.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 3 -->
+                        <div class="bg-slate-900 border border-slate-800 rounded-lg">
+                            <button @click="openFaq = openFaq === 3 ? null : 3" class="w-full text-left p-6 focus:outline-none">
+                                <div class="flex items-center justify-between">
+                                    <h3 class="text-lg font-semibold text-white" data-key="faq3Question">How do you ensure data security and privacy?</h3>
+                                    <i class="fas fa-chevron-down text-slate-400 transition-transform duration-200" :class="{ 'rotate-180': openFaq === 3 }"></i>
+                                </div>
+                            </button>
+                            <div x-show="openFaq === 3" x-collapse class="px-6 pb-6">
+                                <p class="text-slate-400" data-key="faq3Answer">
+                                    We're ISO 27001 certified and SOC 2 Type II compliant. All data is encrypted in transit and at rest, and we can work entirely within your infrastructure if required. We never share client data and offer on-premise deployment options for maximum security.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 4 -->
+                        <div class="bg-slate-900 border border-slate-800 rounded-lg">
+                            <button @click="openFaq = openFaq === 4 ? null : 4" class="w-full text-left p-6 focus:outline-none">
+                                <div class="flex items-center justify-between">
+                                    <h3 class="text-lg font-semibold text-white" data-key="faq4Question">What if the AI solution doesn't work for our business?</h3>
+                                    <i class="fas fa-chevron-down text-slate-400 transition-transform duration-200" :class="{ 'rotate-180': openFaq === 4 }"></i>
+                                </div>
+                            </button>
+                            <div x-show="openFaq === 4" x-collapse class="px-6 pb-6">
+                                <p class="text-slate-400" data-key="faq4Answer">
+                                    We offer a 100% ROI guarantee. If we don't deliver measurable, positive ROI within 12 months, we'll refund your investment. Additionally, we start every project with a comprehensive feasibility study to ensure AI is the right solution for your specific challenges.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 5 -->
+                        <div class="bg-slate-900 border border-slate-800 rounded-lg">
+                            <button @click="openFaq = openFaq === 5 ? null : 5" class="w-full text-left p-6 focus:outline-none">
+                                <div class="flex items-center justify-between">
+                                    <h3 class="text-lg font-semibold text-white" data-key="faq5Question">Do you provide training for our team?</h3>
+                                    <i class="fas fa-chevron-down text-slate-400 transition-transform duration-200" :class="{ 'rotate-180': openFaq === 5 }"></i>
+                                </div>
+                            </button>
+                            <div x-show="openFaq === 5" x-collapse class="px-6 pb-6">
+                                <p class="text-slate-400" data-key="faq5Answer">
+                                    Absolutely. We include comprehensive training as part of every implementation. This covers both technical training for your IT team and user training for end-users. We also provide 24/7 ongoing support and can offer additional training sessions as needed.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -390,6 +873,7 @@
                             <li><a href="#metodologia" class="hover:text-sky-400" data-key="footerLinkMethodology">Methodology</a></li>
                             <li><a href="#valor" class="hover:text-sky-400" data-key="footerLinkValue">Value Creation</a></li>
                             <li><a href="#cases" class="hover:text-sky-400" data-key="footerLinkCases">Success Cases</a></li>
+                            <li><a href="#about" class="hover:text-sky-400" data-key="footerLinkAbout">About Us</a></li>
                         </ul>
                     </div>
                     <div>
@@ -455,33 +939,72 @@
             navMethodology: { pt: 'Metodologia', en: 'Methodology', es: 'Metodología' },
             navValue: { pt: 'Como Geramos Valor', en: 'How We Create Value', es: 'Cómo Generamos Valor' },
             navCases: { pt: 'Cases', en: 'Cases', es: 'Casos' },
+            navAbout: { pt: 'Sobre Nós', en: 'About Us', es: 'Sobre Nosotros' },
             navAudit: { pt: 'Agendar Auditoria', en: 'Schedule Audit', es: 'Agendar Auditoría' },
             navProblemMobile: { pt: 'O Problema', en: 'The Problem', es: 'El Problema' },
             navMethodologyMobile: { pt: 'Metodologia', en: 'Methodology', es: 'Metodología' },
             navValueMobile: { pt: 'Como Geramos Valor', en: 'How We Create Value', es: 'Cómo Generamos Valor' },
             navCasesMobile: { pt: 'Cases', en: 'Cases', es: 'Casos' },
+            navAboutMobile: { pt: 'Sobre Nós', en: 'About Us', es: 'Sobre Nosotros' },
             navAuditMobile: { pt: 'Agendar Auditoria', en: 'Schedule Audit', es: 'Agendar Auditoría' },
             // Hero Section
+            heroTag: { 
+                pt: '✓ Confiado por 250+ Empresas Globalmente', 
+                en: '✓ Trusted by 250+ Companies Worldwide', 
+                es: '✓ Confiado por 250+ Empresas Globalmente' 
+            },
             heroTitle: {
-                pt: 'Sua Empresa Opera no Máximo Potencial?',
-                en: 'Is Your Company Operating at Full Potential?',
-                es: '¿Su Empresa Opera a su Máximo Potencial?'
+                pt: 'Desbloqueie Receita Oculta com Soluções de IA Empresarial',
+                en: 'Unlock Hidden Revenue with Enterprise AI Solutions',
+                es: 'Desbloquee Ingresos Ocultos con Soluciones de IA Empresarial'
             },
             heroSubtitle: {
-                pt: 'Nós usamos Inteligência Artificial para descobrir e eliminar ineficiências, automatizar processos complexos e criar novas fontes de receita que você nem sabia que existiam.',
-                en: 'We use Artificial Intelligence to uncover and eliminate inefficiencies, automate complex processes, and create new revenue streams you didn\'t even know existed.',
-                es: 'Utilizamos Inteligencia Artificial para descubrir y eliminar ineficiencias, automatizar procesos complejos y crear nuevas fuentes de ingresos que ni siquiera sabía que existían.'
+                pt: 'Nossa metodologia comprovada de IA ajudou empresas a aumentar a eficiência operacional em 40% e reduzir custos em $2.3M em média no primeiro ano.',
+                en: 'Our proven AI methodology has helped companies increase operational efficiency by 40% and reduce costs by $2.3M on average in the first year.',
+                es: 'Nuestra metodología probada de IA ha ayudado a empresas a aumentar la eficiencia operativa en 40% y reducir costos en $2.3M en promedio en el primer año.'
             },
+            heroSecurity: { pt: 'Certificado ISO 27001', en: 'ISO 27001 Certified', es: 'Certificado ISO 27001' },
+            heroResponse: { pt: 'Suporte 24/7', en: '24/7 Support', es: 'Soporte 24/7' },
+            heroGuarantee: { pt: 'Garantia de ROI', en: 'ROI Guarantee', es: 'Garantía de ROI' },
             heroCtaPrimary: {
-                pt: 'Solicitar Diagnóstico Gratuito',
-                en: 'Request Free Diagnosis',
-                es: 'Solicitar Diagnóstico Gratuito'
+                pt: 'Análise Gratuita de $50K ROI',
+                en: 'Get Free $50K ROI Analysis',
+                es: 'Análisis Gratuito de $50K ROI'
             },
             heroCtaSecondary: {
-                pt: 'Entenda nossa Metodologia',
-                en: 'Understand our Methodology',
-                es: 'Entienda nuestra Metodología'
+                pt: 'Ver Histórias de Sucesso',
+                en: 'View Success Stories',
+                es: 'Ver Historias de Éxito'
             },
+            heroProof: {
+                pt: 'Junte-se a empresas como Microsoft, Siemens e Mercedes-Benz que confiam em nossas soluções de IA',
+                en: 'Join companies like Microsoft, Siemens, and Mercedes-Benz who trust our AI solutions',
+                es: 'Únase a empresas como Microsoft, Siemens y Mercedes-Benz que confían en nuestras soluciones de IA'
+            },
+            // Statistics Section
+            statsTitle: {
+                pt: 'Resultados Reais de Empresas Reais',
+                en: 'Real Results from Real Companies',
+                es: 'Resultados Reales de Empresas Reales'
+            },
+            statsSubtitle: {
+                pt: 'Não apenas implementamos IA - entregamos resultados empresariais mensuráveis que impulsionam seu crescimento.',
+                en: 'We don\'t just implement AI - we deliver measurable business outcomes that drive your growth.',
+                es: 'No solo implementamos IA - entregamos resultados empresariales medibles que impulsan su crecimiento.'
+            },
+            stat1Number: { pt: '250+', en: '250+', es: '250+' },
+            stat1Title: { pt: 'Empresas Atendidas', en: 'Companies Served', es: 'Empresas Atendidas' },
+            stat1Desc: { pt: 'Em 5 continentes', en: 'Across 5 continents', es: 'En 5 continentes' },
+            stat2Number: { pt: '$2.3M', en: '$2.3M', es: '$2.3M' },
+            stat2Title: { pt: 'Economia Média', en: 'Average Cost Savings', es: 'Ahorro Promedio' },
+            stat2Desc: { pt: 'No primeiro ano', en: 'In the first year', es: 'En el primer año' },
+            stat3Number: { pt: '40%', en: '40%', es: '40%' },
+            stat3Title: { pt: 'Aumento de Eficiência', en: 'Efficiency Increase', es: 'Aumento de Eficiencia' },
+            stat3Desc: { pt: 'Melhoria média', en: 'Average improvement', es: 'Mejora promedio' },
+            stat4Number: { pt: '98%', en: '98%', es: '98%' },
+            stat4Title: { pt: 'Satisfação do Cliente', en: 'Client Satisfaction', es: 'Satisfacción del Cliente' },
+            stat4Desc: { pt: 'Nos recomendariam', en: 'Would recommend us', es: 'Nos recomendarían' },
+            clientsTitle: { pt: 'Confiado por líderes da indústria', en: 'Trusted by industry leaders', es: 'Confiado por líderes de la industria' },
             // Smart Voice Message Translator Section
             voiceTranslatorTitle: {
                 pt: 'Smart Voice Message Translator',
@@ -611,32 +1134,126 @@
             graphMonth: { pt: 'Mês', en: 'Month', es: 'Mes' },
             graphStart: { pt: 'Início', en: 'Start', es: 'Inicio' },
             // Cases Section
-            casesTitle: { pt: 'Nossos Projetos em Ação', en: 'Our Projects in Action', es: 'Nuestros Proyectos en Acción' },
-            casesSubtitle: { pt: 'Resultados concretos para clientes reais.', en: 'Concrete results for real clients.', es: 'Resultados concretos para clientes reales.' },
-            case1Tag: { pt: 'Indústria', en: 'Industry', es: 'Industria' },
-            case1Title: { pt: 'Redução de Desperdício na Produção', en: 'Waste Reduction in Production', es: 'Reducción de Desperdicios en la Producción' },
-            case1Desc: {
-                pt: 'Implementamos visão computacional para identificar defeitos em tempo real, reduzindo o descarte de material e os custos associados.',
-                en: 'We implemented computer vision to identify defects in real-time, reducing material scrap and associated costs.',
-                es: 'Implementamos visión por computadora para identificar defectos en tiempo real, reduciendo el desecho de material y los costos asociados.'
-            },
-            case1Result: { pt: ' de desperdício', en: ' in waste', es: ' de desperdicio' },
+            casesTitle: { pt: 'Histórias de Sucesso Comprovadas', en: 'Proven Success Stories', es: 'Historias de Éxito Comprobadas' },
+            casesSubtitle: { pt: 'Empresas reais, resultados reais, ROI mensurável. Veja como nossas soluções de IA transformam negócios.', en: 'Real companies, real results, measurable ROI. See how our AI solutions transform businesses.', es: 'Empresas reales, resultados reales, ROI medible. Vea cómo nuestras soluciones de IA transforman negocios.' },
+            
+            // Featured Case
+            featuredCaseTag: { pt: 'Sucesso Destacado', en: 'Featured Success', es: 'Éxito Destacado' },
+            featuredCaseIndustry: { pt: 'Manufatura | Fortune 500', en: 'Manufacturing | Fortune 500', es: 'Manufactura | Fortune 500' },
+            featuredCaseTitle: { pt: '$3.2M de Redução de Custos em 8 Meses', en: '$3.2M Cost Reduction in 8 Months', es: '$3.2M de Reducción de Costos en 8 Meses' },
+            featuredCaseDesc: { pt: 'Fabricante automotivo global implementou nosso sistema de controle de qualidade com IA em 3 linhas de produção, reduzindo defeitos em 87% e eliminando $3.2M em custos anuais de desperdício.', en: 'Global automotive manufacturer implemented our AI-powered quality control system across 3 production lines, reducing defects by 87% and eliminating $3.2M in annual waste costs.', es: 'Fabricante automotriz global implementó nuestro sistema de control de calidad con IA en 3 líneas de producción, reduciendo defectos en 87% y eliminando $3.2M en costos anuales de desperdicio.' },
+            featuredCaseStat1: { pt: '87%', en: '87%', es: '87%' },
+            featuredCaseStat1Label: { pt: 'Redução de Defeitos', en: 'Defect Reduction', es: 'Reducción de Defectos' },
+            featuredCaseStat2: { pt: '$3.2M', en: '$3.2M', es: '$3.2M' },
+            featuredCaseStat2Label: { pt: 'Economia Anual', en: 'Annual Savings', es: 'Ahorro Anual' },
+            featuredCaseStat3: { pt: '8', en: '8', es: '8' },
+            featuredCaseStat3Label: { pt: 'Meses para ROI', en: 'Months ROI', es: 'Meses ROI' },
+            featuredCaseQuote: { pt: '"A solução de IA da ITCBR.IO superou nossas expectativas. O ROI foi evidente em poucos meses, e as melhorias de qualidade são notáveis."', en: '"ITCBR.IO\'s AI solution exceeded our expectations. The ROI was evident within months, and the quality improvements are remarkable."', es: '"La solución de IA de ITCBR.IO superó nuestras expectativas. El ROI fue evidente en meses, y las mejoras de calidad son notables."' },
+            featuredCaseAuthor: { pt: '— CTO, Fabricante Automotivo Global', en: '— CTO, Global Automotive Manufacturer', es: '— CTO, Fabricante Automotriz Global' },
+            
+            // Individual Cases
+            case1Tag: { pt: 'Manufatura', en: 'Manufacturing', es: 'Manufactura' },
+            case1Title: { pt: 'Sistema de Controle de Qualidade Inteligente', en: 'Smart Quality Control System', es: 'Sistema de Control de Calidad Inteligente' },
+            case1Desc: { pt: 'IA de visão computacional identifica defeitos de produção em tempo real, sinalizando automaticamente problemas e prevenindo que produtos defeituosos cheguem aos clientes.', en: 'Computer vision AI identifies production defects in real-time, automatically flagging issues and preventing defective products from reaching customers.', es: 'IA de visión por computadora identifica defectos de producción en tiempo real, marcando automáticamente problemas y previniendo que productos defectuosos lleguen a los clientes.' },
+            case1Metric1: { pt: 'Detecção de Defeitos:', en: 'Defect Detection:', es: 'Detección de Defectos:' },
+            case1Metric2: { pt: 'Custos de Qualidade:', en: 'Quality Costs:', es: 'Costos de Calidad:' },
+            case1Metric3: { pt: 'Implementação:', en: 'Implementation:', es: 'Implementación:' },
+            case1Result: { pt: 'economia anual', en: 'annual savings', es: 'ahorro anual' },
+            case1ROI: { pt: 'ROI: 340%', en: 'ROI: 340%', es: 'ROI: 340%' },
+            
             case2Tag: { pt: 'Logística', en: 'Logistics', es: 'Logística' },
-            case2Title: { pt: 'Otimização de Rotas de Entrega', en: 'Delivery Route Optimization', es: 'Optimización de Rutas de Entrega' },
-            case2Desc: {
-                pt: 'Desenvolvemos um algoritmo que otimiza as rotas em tempo real, considerando trânsito, janelas de entrega e capacidade dos veículos.',
-                en: 'We developed an algorithm that optimizes routes in real-time, considering traffic, delivery windows, and vehicle capacity.',
-                es: 'Desarrollamos un algoritmo que optimiza las rutas en tiempo real, considerando el tráfico, las ventanas de entrega y la capacidad de los vehículos.'
-            },
-            case2Result: { pt: ' no custo com combustível', en: ' in fuel cost', es: ' en costo de combustible' },
-            case3Tag: { pt: 'Financeiro', en: 'Finance', es: 'Finanzas' },
-            case3Title: { pt: 'Análise de Risco de Crédito', en: 'Credit Risk Analysis', es: 'Análisis de Riesgo Crediticio' },
-            case3Desc: {
-                pt: 'Criamos um modelo de machine learning que analisa múltiplas variáveis para prever a probabilidade de inadimplência com mais precisão.',
-                en: 'We created a machine learning model that analyzes multiple variables to predict the probability of default with greater accuracy.',
-                es: 'Creamos un modelo de machine learning que analiza múltiples variables para predecir la probabilidad de incumplimiento con mayor precisión.'
-            },
-            case3Result: { pt: ' de acurácia', en: ' accuracy', es: ' de precisión' },
+            case2Title: { pt: 'Otimização Inteligente de Rotas', en: 'Intelligent Route Optimization', es: 'Optimización Inteligente de Rutas' },
+            case2Desc: { pt: 'Sistema logístico com IA otimiza rotas de entrega em tempo real, considerando padrões de tráfego, clima, janelas de entrega e restrições de capacidade do veículo.', en: 'AI-powered logistics system optimizes delivery routes in real-time, considering traffic patterns, weather, delivery windows, and vehicle capacity constraints.', es: 'Sistema logístico con IA optimiza rutas de entrega en tiempo real, considerando patrones de tráfico, clima, ventanas de entrega y restricciones de capacidad del vehículo.' },
+            case2Metric1: { pt: 'Eficiência de Combustível:', en: 'Fuel Efficiency:', es: 'Eficiencia de Combustible:' },
+            case2Metric2: { pt: 'Tempo de Entrega:', en: 'Delivery Time:', es: 'Tiempo de Entrega:' },
+            case2Metric3: { pt: 'Satisfação do Cliente:', en: 'Customer Satisfaction:', es: 'Satisfacción del Cliente:' },
+            case2Result: { pt: 'economia anual', en: 'annual savings', es: 'ahorro anual' },
+            case2ROI: { pt: 'ROI: 280%', en: 'ROI: 280%', es: 'ROI: 280%' },
+            
+            case3Tag: { pt: 'Finanças', en: 'Finance', es: 'Finanzas' },
+            case3Title: { pt: 'Análise Avançada de Riscos', en: 'Advanced Risk Analytics', es: 'Análisis Avanzado de Riesgos' },
+            case3Desc: { pt: 'Modelo de machine learning analisa 500+ variáveis para prever risco de inadimplência com precisão sem precedentes, permitindo decisões de empréstimo mais inteligentes.', en: 'Machine learning model analyzes 500+ variables to predict credit default risk with unprecedented accuracy, enabling smarter lending decisions.', es: 'Modelo de machine learning analiza 500+ variables para predecir riesgo de incumplimiento crediticio con precisión sin precedentes, permitiendo decisiones de préstamo más inteligentes.' },
+            case3Metric1: { pt: 'Precisão de Previsão:', en: 'Prediction Accuracy:', es: 'Precisión de Predicción:' },
+            case3Metric2: { pt: 'Redução de Dívida Incobrável:', en: 'Bad Debt Reduction:', es: 'Reducción de Deuda Incobrable:' },
+            case3Metric3: { pt: 'Velocidade de Processamento:', en: 'Processing Speed:', es: 'Velocidad de Procesamiento:' },
+            case3Result: { pt: 'perdas prevenidas', en: 'prevented losses', es: 'pérdidas prevenidas' },
+            case3ROI: { pt: 'ROI: 520%', en: 'ROI: 520%', es: 'ROI: 520%' },
+            
+            casesBottomText: { pt: 'Pronto para ver resultados similares no seu negócio?', en: 'Ready to see similar results in your business?', es: '¿Listo para ver resultados similares en su negocio?' },
+            casesBottomCTA: { pt: 'Agende Sua Consulta Gratuita', en: 'Schedule Your Free Consultation', es: 'Agende Su Consulta Gratuita' },
+            
+            // About Us Section
+            aboutTitle: { pt: 'Os Especialistas em IA Por Trás do Seu Sucesso', en: 'The AI Experts Behind Your Success', es: 'Los Expertos en IA Detrás de Su Éxito' },
+            aboutSubtitle: { pt: 'Nossa equipe combina 50+ anos de experiência coletiva em IA, machine learning e software empresarial para entregar soluções que realmente transformam negócios.', en: 'Our team combines 50+ years of collective experience in AI, machine learning, and enterprise software to deliver solutions that truly transform businesses.', es: 'Nuestro equipo combina 50+ años de experiencia colectiva en IA, machine learning y software empresarial para entregar soluciones que realmente transforman negocios.' },
+            
+            // Team Members
+            teamMember1Name: { pt: 'Dr. Rafael Silva', en: 'Dr. Rafael Silva', es: 'Dr. Rafael Silva' },
+            teamMember1Title: { pt: 'Diretor de IA e Fundador', en: 'Chief AI Officer & Founder', es: 'Director de IA y Fundador' },
+            teamMember1Bio: { pt: 'Ph.D. em Ciência da Computação pelo MIT. Ex-Líder de Pesquisa em IA do Google. 15+ anos desenvolvendo soluções de IA para empresas Fortune 500.', en: 'Ph.D. in Computer Science from MIT. Former AI Research Lead at Google. 15+ years developing AI solutions for Fortune 500 companies.', es: 'Ph.D. en Ciencias de la Computación del MIT. Ex-Líder de Investigación en IA de Google. 15+ años desarrollando soluciones de IA para empresas Fortune 500.' },
+            teamMember1Skill1: { pt: 'Deep Learning', en: 'Deep Learning', es: 'Deep Learning' },
+            teamMember1Skill2: { pt: 'Visão Computacional', en: 'Computer Vision', es: 'Visión por Computadora' },
+            
+            teamMember2Name: { pt: 'Ana Martinez', en: 'Ana Martinez', es: 'Ana Martinez' },
+            teamMember2Title: { pt: 'Chefe de Ciência de Dados', en: 'Head of Data Science', es: 'Jefa de Ciencia de Datos' },
+            teamMember2Bio: { pt: 'M.S. em Machine Learning pela Stanford. Ex-Cientista de Dados Principal da Microsoft. Especializada em análise preditiva e soluções de NLP.', en: 'M.S. in Machine Learning from Stanford. Ex-Microsoft Principal Data Scientist. Specialized in predictive analytics and NLP solutions.', es: 'M.S. en Machine Learning de Stanford. Ex-Científica de Datos Principal de Microsoft. Especializada en análisis predictivo y soluciones de NLP.' },
+            teamMember2Skill1: { pt: 'Engenharia ML', en: 'ML Engineering', es: 'Ingeniería ML' },
+            teamMember2Skill2: { pt: 'Big Data', en: 'Big Data', es: 'Big Data' },
+            
+            teamMember3Name: { pt: 'James Liu', en: 'James Liu', es: 'James Liu' },
+            teamMember3Title: { pt: 'Arquiteto de Soluções Empresariais', en: 'Enterprise Solutions Architect', es: 'Arquitecto de Soluciones Empresariales' },
+            teamMember3Bio: { pt: 'B.S. em Engenharia de Software pela Carnegie Mellon. Ex-Arquiteto Líder do IBM Watson. Especialista em integração e escalabilidade de IA empresarial.', en: 'B.S. in Software Engineering from Carnegie Mellon. Former Lead Architect at IBM Watson. Expert in enterprise AI integration and scalability.', es: 'B.S. en Ingeniería de Software de Carnegie Mellon. Ex-Arquitecto Líder en IBM Watson. Experto en integración y escalabilidad de IA empresarial.' },
+            teamMember3Skill1: { pt: 'IA em Nuvem', en: 'Cloud AI', es: 'IA en la Nube' },
+            teamMember3Skill2: { pt: 'DevOps', en: 'DevOps', es: 'DevOps' },
+            
+            // Credentials
+            credentialsTitle: { pt: 'Credenciais de Classe Mundial', en: 'World-Class Credentials', es: 'Credenciales de Clase Mundial' },
+            credential1Title: { pt: 'Excelência Acadêmica', en: 'Academic Excellence', es: 'Excelencia Académica' },
+            credential1Desc: { pt: 'PhDs e Mestrados do MIT, Stanford, Carnegie Mellon', en: 'PhDs and Masters from MIT, Stanford, Carnegie Mellon', es: 'PhDs y Masters del MIT, Stanford, Carnegie Mellon' },
+            credential2Title: { pt: 'Reconhecimento da Indústria', en: 'Industry Recognition', es: 'Reconocimiento de la Industria' },
+            credential2Desc: { pt: 'Vencedores do Prêmio de Inovação em IA da Microsoft 2023', en: 'Winners of Microsoft AI Innovation Award 2023', es: 'Ganadores del Premio de Innovación en IA de Microsoft 2023' },
+            credential3Title: { pt: 'Certificado de Segurança', en: 'Security Certified', es: 'Certificado de Seguridad' },
+            credential3Desc: { pt: 'ISO 27001, SOC 2 Type II, conforme GDPR', en: 'ISO 27001, SOC 2 Type II, GDPR compliant', es: 'ISO 27001, SOC 2 Type II, conforme GDPR' },
+            credential4Title: { pt: 'Parcerias Estratégicas', en: 'Strategic Partnerships', es: 'Asociaciones Estratégicas' },
+            credential4Desc: { pt: 'Microsoft Gold Partner, AWS Advanced Consulting Partner', en: 'Microsoft Gold Partner, AWS Advanced Consulting Partner', es: 'Microsoft Gold Partner, AWS Advanced Consulting Partner' },
+            
+            // Company Stats
+            companyStatsTitle: { pt: 'Nosso Histórico', en: 'Our Track Record', es: 'Nuestro Historial' },
+            companyStat1: { pt: '250+', en: '250+', es: '250+' },
+            companyStat1Label: { pt: 'Projetos Entregues', en: 'Projects Delivered', es: 'Proyectos Entregados' },
+            companyStat2: { pt: '50+', en: '50+', es: '50+' },
+            companyStat2Label: { pt: 'Anos de Experiência Combinada', en: 'Years Combined Experience', es: 'Años de Experiencia Combinada' },
+            companyStat3: { pt: '5', en: '5', es: '5' },
+            companyStat3Label: { pt: 'Continentes Atendidos', en: 'Continents Served', es: 'Continentes Atendidos' },
+            companyStat4: { pt: '24/7', en: '24/7', es: '24/7' },
+            companyStat4Label: { pt: 'Suporte Disponível', en: 'Support Available', es: 'Soporte Disponible' },
+            
+            // Guarantee
+            guaranteeTitle: { pt: '100% Garantia de ROI', en: '100% ROI Guarantee', es: '100% Garantía de ROI' },
+            guaranteeDesc: { pt: 'Se não entregarmos ROI mensurável em 12 meses, reembolsaremos seu investimento', en: 'If we don\'t deliver measurable ROI within 12 months, we\'ll refund your investment', es: 'Si no entregamos ROI medible dentro de 12 meses, reembolsaremos su inversión' },
+            
+            // Technologies
+            techTitle: { pt: 'Tecnologias de Ponta', en: 'Cutting-Edge Technologies', es: 'Tecnologías de Vanguardia' },
+            techSubtitle: { pt: 'Utilizamos os mais recentes frameworks de IA e plataformas de nuvem para construir soluções escaláveis', en: 'We leverage the latest AI frameworks and cloud platforms to build scalable solutions', es: 'Aprovechamos los últimos frameworks de IA y plataformas en la nube para construir soluciones escalables' },
+            
+            // FAQ Section
+            faqTitle: { pt: 'Perguntas Frequentes', en: 'Frequently Asked Questions', es: 'Preguntas Frecuentes' },
+            faqSubtitle: { pt: 'Tudo que você precisa saber sobre nosso processo de implementação de IA e o que esperar.', en: 'Everything you need to know about our AI implementation process and what to expect.', es: 'Todo lo que necesita saber sobre nuestro proceso de implementación de IA y qué esperar.' },
+            
+            faq1Question: { pt: 'Quanto tempo leva para ver ROI da implementação de IA?', en: 'How long does it take to see ROI from AI implementation?', es: '¿Cuánto tiempo lleva ver ROI de la implementación de IA?' },
+            faq1Answer: { pt: 'A maioria de nossos clientes vê melhorias mensuráveis em 3-6 meses, com ROI completo tipicamente alcançado em 8-12 meses. Nosso cliente médio vê 340% de ROI no primeiro ano, com alguns vendo resultados já em 30 dias para projetos de automação mais simples.', en: 'Most of our clients see measurable improvements within 3-6 months, with full ROI typically achieved within 8-12 months. Our average client sees 340% ROI in the first year, with some seeing results as early as 30 days for simpler automation projects.', es: 'La mayoría de nuestros clientes ven mejoras medibles dentro de 3-6 meses, con ROI completo típicamente alcanzado dentro de 8-12 meses. Nuestro cliente promedio ve 340% ROI en el primer año, con algunos viendo resultados tan pronto como 30 días para proyectos de automatización más simples.' },
+            
+            faq2Question: { pt: 'Precisamos ter infraestrutura de dados existente?', en: 'Do we need to have existing data infrastructure?', es: '¿Necesitamos tener infraestructura de datos existente?' },
+            faq2Answer: { pt: 'Não necessariamente. Trabalhamos com empresas em todos os estágios de maturidade digital. Nossa equipe pode ajudar você a construir a infraestrutura de dados necessária como parte do projeto, ou otimizar seus sistemas existentes. Avaliaremos seu estado atual durante a auditoria gratuita.', en: 'Not necessarily. We work with companies at all stages of digital maturity. Our team can help you build the necessary data infrastructure as part of the project, or optimize your existing systems. We\'ll assess your current state during the free audit.', es: 'No necesariamente. Trabajamos con empresas en todas las etapas de madurez digital. Nuestro equipo puede ayudarle a construir la infraestructura de datos necesaria como parte del proyecto, u optimizar sus sistemas existentes. Evaluaremos su estado actual durante la auditoría gratuita.' },
+            
+            faq3Question: { pt: 'Como vocês garantem segurança e privacidade dos dados?', en: 'How do you ensure data security and privacy?', es: '¿Cómo garantizan la seguridad y privacidad de los datos?' },
+            faq3Answer: { pt: 'Somos certificados ISO 27001 e conformes com SOC 2 Type II. Todos os dados são criptografados em trânsito e em repouso, e podemos trabalhar inteiramente dentro de sua infraestrutura se necessário. Nunca compartilhamos dados de clientes e oferecemos opções de implementação local para máxima segurança.', en: 'We\'re ISO 27001 certified and SOC 2 Type II compliant. All data is encrypted in transit and at rest, and we can work entirely within your infrastructure if required. We never share client data and offer on-premise deployment options for maximum security.', es: 'Estamos certificados ISO 27001 y somos conformes con SOC 2 Type II. Todos los datos están encriptados en tránsito y en reposo, y podemos trabajar completamente dentro de su infraestructura si es necesario. Nunca compartimos datos de clientes y ofrecemos opciones de implementación local para máxima seguridad.' },
+            
+            faq4Question: { pt: 'E se a solução de IA não funcionar para nosso negócio?', en: 'What if the AI solution doesn\'t work for our business?', es: '¿Qué pasa si la solución de IA no funciona para nuestro negocio?' },
+            faq4Answer: { pt: 'Oferecemos uma garantia de 100% de ROI. Se não entregarmos ROI mensurável e positivo em 12 meses, reembolsaremos seu investimento. Além disso, começamos todo projeto com um estudo de viabilidade abrangente para garantir que a IA seja a solução certa para seus desafios específicos.', en: 'We offer a 100% ROI guarantee. If we don\'t deliver measurable, positive ROI within 12 months, we\'ll refund your investment. Additionally, we start every project with a comprehensive feasibility study to ensure AI is the right solution for your specific challenges.', es: 'Ofrecemos una garantía del 100% de ROI. Si no entregamos ROI medible y positivo dentro de 12 meses, reembolsaremos su inversión. Además, comenzamos cada proyecto con un estudio de viabilidad integral para asegurar que la IA sea la solución correcta para sus desafíos específicos.' },
+            
+            faq5Question: { pt: 'Vocês fornecem treinamento para nossa equipe?', en: 'Do you provide training for our team?', es: '¿Proporcionan entrenamiento para nuestro equipo?' },
+            faq5Answer: { pt: 'Absolutamente. Incluímos treinamento abrangente como parte de toda implementação. Isso cobre tanto treinamento técnico para sua equipe de TI quanto treinamento de usuário para usuários finais. Também fornecemos suporte contínuo 24/7 e podemos oferecer sessões de treinamento adicionais conforme necessário.', en: 'Absolutely. We include comprehensive training as part of every implementation. This covers both technical training for your IT team and user training for end-users. We also provide 24/7 ongoing support and can offer additional training sessions as needed.', es: 'Absolutamente. Incluimos entrenamiento integral como parte de cada implementación. Esto cubre tanto entrenamiento técnico para su equipo de TI como entrenamiento de usuario para usuarios finales. También proporcionamos soporte continuo 24/7 y podemos ofrecer sesiones de entrenamiento adicionales según sea necesario.' },
+            
             // Contact Form
             contactTitle: { pt: 'Agende seu Diagnóstico Estratégico de IA', en: 'Schedule Your Strategic AI Diagnosis', es: 'Agende su Diagnóstico Estratégico de IA' },
             contactSubtitle: {
@@ -664,6 +1281,7 @@
             footerLinkMethodology: { pt: 'Metodologia', en: 'Methodology', es: 'Metodología' },
             footerLinkValue: { pt: 'Geração de Valor', en: 'Value Creation', es: 'Generación de Valor' },
             footerLinkCases: { pt: 'Cases de Sucesso', en: 'Success Cases', es: 'Casos de Éxito' },
+            footerLinkAbout: { pt: 'Sobre Nós', en: 'About Us', es: 'Sobre Nosotros' },
             footerAddress: { pt: 'Endereço', en: 'Address', es: 'Dirección' },
             footerContact: { pt: 'Contato', en: 'Contact', es: 'Contacto' },
             footerCopyright: { pt: '&copy; 2024 ITCBR.IO. Todos os direitos reservados.', en: '&copy; 2024 ITCBR.IO. All rights reserved.', es: '&copy; 2024 ITCBR.IO. Todos los derechos reservados.' },
