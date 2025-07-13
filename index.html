@@ -41,12 +41,202 @@
             font-family: 'Inter', sans-serif;
             background-color: #020617; /* slate-950 */
         }
+        
+        /* Enhanced Background Gradients */
         .hero-gradient {
-            background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(14, 165, 233, 0.2), rgba(14, 165, 233, 0));
+            background: radial-gradient(ellipse 120% 80% at 50% -20%, rgba(14, 165, 233, 0.3), rgba(14, 165, 233, 0)),
+                        radial-gradient(ellipse 100% 60% at 80% 0%, rgba(99, 102, 241, 0.15), rgba(99, 102, 241, 0));
         }
+        
         .section-glow {
-            background: radial-gradient(ellipse 100% 60% at 50% 100%, rgba(14, 165, 233, 0.1), rgba(14, 165, 233, 0));
+            background: radial-gradient(ellipse 120% 80% at 50% 100%, rgba(14, 165, 233, 0.15), rgba(14, 165, 233, 0));
         }
+        
+        /* Modern Glass Cards */
+        .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .glass-card:hover {
+            transform: translateY(-8px);
+            background: rgba(15, 23, 42, 0.8);
+            border-color: rgba(56, 189, 248, 0.3);
+            box-shadow: 0 25px 50px -12px rgba(14, 165, 233, 0.25);
+        }
+        
+        /* Enhanced Buttons */
+        .btn-primary {
+            background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 100%);
+            color: white;
+            font-weight: 700;
+            padding: 14px 32px;
+            border-radius: 12px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px 0 rgba(14, 165, 233, 0.3);
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 8px 25px 0 rgba(14, 165, 233, 0.4);
+        }
+        
+        .btn-secondary {
+            background: rgba(30, 41, 59, 0.8);
+            color: white;
+            font-weight: 600;
+            padding: 14px 32px;
+            border-radius: 12px;
+            border: 1px solid rgba(148, 163, 184, 0.3);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(51, 65, 85, 0.9);
+            border-color: rgba(56, 189, 248, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Floating Action Button */
+        .fab {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            box-shadow: 0 8px 32px rgba(14, 165, 233, 0.3);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1000;
+        }
+        
+        .fab:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 40px rgba(14, 165, 233, 0.4);
+        }
+        
+        /* Enhanced Cards */
+        .feature-card {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.6) 100%);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            border-radius: 16px;
+            padding: 32px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.6), transparent);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-12px);
+            border-color: rgba(56, 189, 248, 0.3);
+            box-shadow: 0 25px 50px -12px rgba(14, 165, 233, 0.25);
+        }
+        
+        /* Animated Background Patterns */
+        .animated-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.03;
+            background-image: 
+                radial-gradient(circle at 25% 25%, #0ea5e9 1px, transparent 1px),
+                radial-gradient(circle at 75% 75%, #3b82f6 1px, transparent 1px);
+            background-size: 40px 40px;
+            animation: float 20s linear infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+            100% { transform: translateY(0px) rotate(360deg); }
+        }
+        
+        /* Modern Form Styles */
+        .form-input {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            border-radius: 12px;
+            padding: 16px 20px;
+            color: white;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .form-input:focus {
+            border-color: #0ea5e9;
+            box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+            background: rgba(15, 23, 42, 0.8);
+            outline: none;
+        }
+        
+        .form-input::placeholder {
+            color: rgba(148, 163, 184, 0.7);
+        }
+        
+        /* Enhanced Mobile Menu */
+        .mobile-menu-overlay {
+            background: rgba(2, 6, 23, 0.95);
+            backdrop-filter: blur(20px);
+        }
+        
+        /* Scroll indicator */
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #0ea5e9, #3b82f6);
+            transform-origin: left;
+            z-index: 9999;
+        }
+        
         /* Hide scrollbar for mobile menu */
         .no-scrollbar::-webkit-scrollbar {
             display: none;
@@ -56,42 +246,116 @@
             scrollbar-width: none;  /* Firefox */
         }
         [x-cloak] { display: none !important; }
+        
+        /* Pulse animation for CTAs */
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        /* Glow effect for important elements */
+        .glow-effect {
+            box-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
+        }
+        
+        /* Modern loading animation */
+        .loading-spinner {
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Enhanced tooltips */
+        .tooltip {
+            position: relative;
+        }
+        
+        .tooltip::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(15, 23, 42, 0.9);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+        }
+        
+        .tooltip:hover::after {
+            opacity: 1;
+        }
     </style>
 </head>
 <body class="text-slate-300 antialiased" x-data="{ openMenu: false, langMenu: false }">
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-indicator" id="scroll-indicator"></div>
+    
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
 
     <!-- Header -->
-    <header class="bg-slate-950/80 backdrop-blur-lg fixed w-full z-40">
+    <header class="bg-slate-950/80 backdrop-blur-lg fixed w-full z-40 border-b border-slate-800/50">
         <div class="container mx-auto px-4 sm:px-6">
-            <div class="flex items-center justify-between h-20 border-b border-slate-800">
-                <a href="#" class="text-2xl font-bold text-white">ITCBR.<span class="text-sky-400">IO</span></a>
+            <div class="flex items-center justify-between h-20">
+                <a href="#" class="text-2xl font-bold text-white hover:text-sky-400 transition-colors">
+                    ITCBR.<span class="text-sky-400">IO</span>
+                </a>
                 
                 <nav class="hidden lg:flex items-center space-x-8">
-                    <a href="#problema" class="text-sm font-medium text-slate-300 hover:text-sky-400 transition-colors" data-key="navProblem">The Problem</a>
-                    <a href="#metodologia" class="text-sm font-medium text-slate-300 hover:text-sky-400 transition-colors" data-key="navMethodology">Methodology</a>
-                    <a href="#valor" class="text-sm font-medium text-slate-300 hover:text-sky-400 transition-colors" data-key="navValue">How We Create Value</a>
-                    <a href="#cases" class="text-sm font-medium text-slate-300 hover:text-sky-400 transition-colors" data-key="navCases">Cases</a>
+                    <a href="#problema" class="text-sm font-medium text-slate-300 hover:text-sky-400 transition-all duration-300 hover:scale-105" data-key="navProblem">The Problem</a>
+                    <a href="#metodologia" class="text-sm font-medium text-slate-300 hover:text-sky-400 transition-all duration-300 hover:scale-105" data-key="navMethodology">Methodology</a>
+                    <a href="#valor" class="text-sm font-medium text-slate-300 hover:text-sky-400 transition-all duration-300 hover:scale-105" data-key="navValue">How We Create Value</a>
+                    <a href="#cases" class="text-sm font-medium text-slate-300 hover:text-sky-400 transition-all duration-300 hover:scale-105" data-key="navCases">Cases</a>
                 </nav>
 
                 <div class="flex items-center space-x-4">
                     <!-- Language Switcher -->
                     <div x-data="{ langMenu: false }" class="relative hidden lg:block">
-                        <button @click="langMenu = !langMenu" class="flex items-center space-x-2 text-sm font-medium text-slate-300 hover:text-sky-400 transition-colors">
+                        <button @click="langMenu = !langMenu" class="flex items-center space-x-2 text-sm font-medium text-slate-300 hover:text-sky-400 transition-colors btn-secondary">
                             <i class="fas fa-globe"></i>
                             <span id="current-lang-desktop">EN</span>
-                            <i class="fas fa-chevron-down text-xs"></i>
+                            <i class="fas fa-chevron-down text-xs transition-transform duration-200" :class="{ 'rotate-180': langMenu }"></i>
                         </button>
-                        <div x-show="langMenu" @click.away="langMenu = false" x-cloak class="absolute top-full right-0 mt-2 w-32 bg-slate-900 border border-slate-800 rounded-lg shadow-lg">
-                            <a href="#" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800" onclick="changeLanguage('pt')">Português (PT)</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800" onclick="changeLanguage('en')">English (EN)</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800" onclick="changeLanguage('es')">Español (ES)</a>
+                        <div x-show="langMenu" 
+                             x-transition:enter="transition ease-out duration-200"
+                             x-transition:enter-start="opacity-0 scale-95"
+                             x-transition:enter-end="opacity-100 scale-100"
+                             x-transition:leave="transition ease-in duration-150"
+                             x-transition:leave-start="opacity-100 scale-100"
+                             x-transition:leave-end="opacity-0 scale-95"
+                             @click.away="langMenu = false" 
+                             x-cloak 
+                             class="absolute top-full right-0 mt-2 w-36 glass-card rounded-lg shadow-xl">
+                            <a href="#" class="block px-4 py-3 text-sm text-slate-300 hover:bg-slate-800/50 rounded-t-lg transition-colors" onclick="changeLanguage('pt')">🇧🇷 Português</a>
+                            <a href="#" class="block px-4 py-3 text-sm text-slate-300 hover:bg-slate-800/50 transition-colors" onclick="changeLanguage('en')">🇺🇸 English</a>
+                            <a href="#" class="block px-4 py-3 text-sm text-slate-300 hover:bg-slate-800/50 rounded-b-lg transition-colors" onclick="changeLanguage('es')">🇪🇸 Español</a>
                         </div>
                     </div>
                     
-                    <a href="#contato" class="hidden sm:inline-block bg-sky-500 text-white font-bold py-2.5 px-6 rounded-lg hover:bg-sky-600 transition-all duration-300" data-key="navAudit">
+                    <a href="#contato" class="hidden sm:inline-block btn-primary" data-key="navAudit">
+                        <i class="fas fa-calendar-check mr-2"></i>
                         Schedule Audit
                     </a>
-                    <button @click="openMenu = true" class="lg:hidden text-white focus:outline-none z-50">
+                    <button @click="openMenu = true" class="lg:hidden text-white focus:outline-none hover:text-sky-400 transition-colors">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
                 </div>
@@ -99,102 +363,141 @@
         </div>
     </header>
 
-    <!-- Mobile Menu Overlay -->
+    <!-- Enhanced Mobile Menu Overlay -->
     <div x-show="openMenu" x-cloak
-         x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
-         x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
-         class="fixed inset-0 bg-slate-950/95 backdrop-blur-lg z-50 flex flex-col items-center justify-center no-scrollbar">
+         x-transition:enter="transition ease-out duration-300" 
+         x-transition:enter-start="opacity-0" 
+         x-transition:enter-end="opacity-100"
+         x-transition:leave="transition ease-in duration-300" 
+         x-transition:leave-start="opacity-100" 
+         x-transition:leave-end="opacity-0"
+         class="fixed inset-0 mobile-menu-overlay z-50 flex flex-col items-center justify-center no-scrollbar">
         
-        <button @click="openMenu = false" class="absolute top-7 right-5 text-white focus:outline-none">
+        <button @click="openMenu = false" class="absolute top-7 right-5 text-white focus:outline-none hover:text-sky-400 transition-colors">
             <i class="fas fa-times text-3xl"></i>
         </button>
 
         <nav class="flex flex-col items-center space-y-8">
-            <a @click="openMenu = false" href="#problema" class="text-2xl font-medium text-slate-300 hover:text-sky-400 transition-colors" data-key="navProblemMobile">The Problem</a>
-            <a @click="openMenu = false" href="#metodologia" class="text-2xl font-medium text-slate-300 hover:text-sky-400 transition-colors" data-key="navMethodologyMobile">Methodology</a>
-            <a @click="openMenu = false" href="#valor" class="text-2xl font-medium text-slate-300 hover:text-sky-400 transition-colors" data-key="navValueMobile">How We Create Value</a>
-            <a @click="openMenu = false" href="#cases" class="text-2xl font-medium text-slate-300 hover:text-sky-400 transition-colors" data-key="navCasesMobile">Cases</a>
-            <a @click="openMenu = false" href="#contato" class="mt-8 bg-sky-500 text-white font-bold py-3 px-10 rounded-lg hover:bg-sky-600 transition-all duration-300" data-key="navAuditMobile">
+            <a @click="openMenu = false" href="#problema" class="text-2xl font-medium text-slate-300 hover:text-sky-400 transition-all duration-300 hover:scale-110" data-key="navProblemMobile">The Problem</a>
+            <a @click="openMenu = false" href="#metodologia" class="text-2xl font-medium text-slate-300 hover:text-sky-400 transition-all duration-300 hover:scale-110" data-key="navMethodologyMobile">Methodology</a>
+            <a @click="openMenu = false" href="#valor" class="text-2xl font-medium text-slate-300 hover:text-sky-400 transition-all duration-300 hover:scale-110" data-key="navValueMobile">How We Create Value</a>
+            <a @click="openMenu = false" href="#cases" class="text-2xl font-medium text-slate-300 hover:text-sky-400 transition-all duration-300 hover:scale-110" data-key="navCasesMobile">Cases</a>
+            <a @click="openMenu = false" href="#contato" class="mt-8 btn-primary" data-key="navAuditMobile">
+                <i class="fas fa-calendar-check mr-2"></i>
                 Schedule Audit
             </a>
         </nav>
         
-        <!-- Language Switcher Mobile -->
-        <div class="mt-12">
-            <div class="flex space-x-4">
-                <button onclick="changeLanguage('pt')" class="font-bold text-slate-400 hover:text-sky-400">PT</button>
+        <!-- Enhanced Language Switcher Mobile -->
+        <div class="mt-12 glass-card p-4 rounded-xl">
+            <div class="flex space-x-6">
+                <button onclick="changeLanguage('pt')" class="font-bold text-slate-400 hover:text-sky-400 transition-colors flex items-center space-x-2">
+                    <span>🇧🇷</span><span>PT</span>
+                </button>
                 <span class="text-slate-600">|</span>
-                <button onclick="changeLanguage('en')" class="font-bold text-slate-400 hover:text-sky-400">EN</button>
+                <button onclick="changeLanguage('en')" class="font-bold text-slate-400 hover:text-sky-400 transition-colors flex items-center space-x-2">
+                    <span>🇺🇸</span><span>EN</span>
+                </button>
                 <span class="text-slate-600">|</span>
-                <button onclick="changeLanguage('es')" class="font-bold text-slate-400 hover:text-sky-400">ES</button>
+                <button onclick="changeLanguage('es')" class="font-bold text-slate-400 hover:text-sky-400 transition-colors flex items-center space-x-2">
+                    <span>🇪🇸</span><span>ES</span>
+                </button>
             </div>
         </div>
     </div>
+
+    <!-- Floating Action Button -->
+    <a href="#contato" class="fab tooltip" data-tooltip="Contact Us">
+        <i class="fas fa-comment-dots"></i>
+    </a>
 
     <main>
         <!-- Smart Voice Message Translator Section -->
         <section id="voice-translator" class="relative pt-40 pb-24 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-900 section-glow">
             <div class="container mx-auto px-4 sm:px-6 text-center relative z-10">
-                <div class="max-w-3xl mx-auto bg-slate-950 p-8 rounded-xl border border-slate-800 shadow-lg">
+                <div class="max-w-3xl mx-auto glass-card p-8 rounded-2xl shadow-2xl">
+                    <div class="flex items-center justify-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-sky-400 to-blue-600 rounded-2xl flex items-center justify-center">
+                            <i class="fas fa-microphone text-white text-2xl"></i>
+                        </div>
+                    </div>
                     <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4" data-key="voiceTranslatorTitle">Smart Voice Message Translator</h2>
                     <p class="text-lg text-slate-400 mb-8" data-key="voiceTranslatorSubtitle">
                         Instant voice message translation in 100+ languages directly in WhatsApp. Completely free!
                     </p>
-                    <a href="#" id="voice-translator-cta" class="inline-block bg-sky-500 text-white font-bold py-3.5 px-8 rounded-lg text-lg hover:bg-sky-600 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-sky-500/20 mb-6" data-key="voiceTranslatorCta">
-                        Try for Free
-                    </a>
-                    <p class="text-xl font-semibold text-white">
-                        <a href="#" id="voice-translator-number" class="hover:text-sky-400 transition-colors">
-                            📱 +1 (929) 999-4115
+                    <div class="space-y-4">
+                        <a href="#" id="voice-translator-cta" class="inline-block btn-primary text-lg pulse-animation" data-key="voiceTranslatorCta">
+                            <i class="fas fa-rocket mr-2"></i>
+                            Try for Free
                         </a>
-                    </p>
+                        <p class="text-xl font-semibold text-white">
+                            <a href="#" id="voice-translator-number" class="hover:text-sky-400 transition-colors glass-card px-4 py-2 rounded-xl inline-block">
+                                📱 +1 (929) 999-4115
+                            </a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Hero Section -->
+        <!-- Enhanced Hero Section -->
         <section class="relative pt-24 pb-24 lg:pt-32 lg:pb-32 overflow-hidden">
             <div class="hero-gradient absolute inset-0"></div>
             <div class="container mx-auto px-4 sm:px-6 text-center relative z-10">
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6" data-key="heroTitle">
-                    Is Your Company Operating at Full Potential?
-                </h1>
-                <p class="text-lg lg:text-xl max-w-3xl mx-auto text-slate-400 mb-10" data-key="heroSubtitle">
-                    We use Artificial Intelligence to uncover and eliminate inefficiencies, automate complex processes, and create new revenue streams you didn't even know existed.
-                </p>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="#contato" class="w-full sm:w-auto bg-sky-500 text-white font-bold py-3.5 px-8 rounded-lg text-lg hover:bg-sky-600 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-sky-500/20" data-key="heroCtaPrimary">
-                        Request Free Diagnosis
-                    </a>
-                    <a href="#metodologia" class="w-full sm:w-auto bg-slate-800 text-white font-semibold py-3.5 px-8 rounded-lg hover:bg-slate-700 transition-all duration-300" data-key="heroCtaSecondary">
-                        Understand our Methodology
-                    </a>
+                <div class="max-w-4xl mx-auto">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6" data-key="heroTitle">
+                        Is Your Company Operating at 
+                        <span class="bg-gradient-to-r from-sky-400 to-blue-600 bg-clip-text text-transparent">Full Potential?</span>
+                    </h1>
+                    <p class="text-lg lg:text-xl max-w-3xl mx-auto text-slate-400 mb-10" data-key="heroSubtitle">
+                        We use Artificial Intelligence to uncover and eliminate inefficiencies, automate complex processes, and create new revenue streams you didn't even know existed.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                        <a href="#contato" class="w-full sm:w-auto btn-primary text-lg group" data-key="heroCtaPrimary">
+                            <i class="fas fa-chart-line mr-2 group-hover:scale-110 transition-transform"></i>
+                            Request Free Diagnosis
+                        </a>
+                        <a href="#metodologia" class="w-full sm:w-auto btn-secondary text-lg group" data-key="heroCtaSecondary">
+                            <i class="fas fa-lightbulb mr-2 group-hover:scale-110 transition-transform"></i>
+                            Understand our Methodology
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- The Problem Section -->
+        <!-- Enhanced Problem Section -->
         <section id="problema" class="py-16 sm:py-24">
             <div class="container mx-auto px-4 sm:px-6">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl sm:text-4xl font-bold text-white" data-key="problemTitle">Manual processes, lost data, and wasted opportunities.</h2>
-                    <p class="text-lg mt-4 max-w-3xl mx-auto text-slate-400" data-key="problemSubtitle">Your company may be losing money and competitiveness due to problems that AI effectively solves.</p>
+                    <div class="inline-flex items-center space-x-2 bg-red-500/10 text-red-400 px-4 py-2 rounded-full text-sm font-medium mb-4">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <span>Critical Issues</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4" data-key="problemTitle">Manual processes, lost data, and wasted opportunities.</h2>
+                    <p class="text-lg max-w-3xl mx-auto text-slate-400" data-key="problemSubtitle">Your company may be losing money and competitiveness due to problems that AI effectively solves.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="p-6 rounded-lg bg-slate-900 border border-slate-800">
-                        <i class="fas fa-person-running text-2xl text-sky-400 mb-4"></i>
-                        <h3 class="font-semibold text-white mb-2" data-key="problemCard1Title">Operational Inefficiency</h3>
-                        <p class="text-sm text-slate-400" data-key="problemCard1Desc">Repetitive tasks consume your team's valuable time, which could be used for strategic activities.</p>
+                    <div class="feature-card group">
+                        <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-person-running text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3" data-key="problemCard1Title">Operational Inefficiency</h3>
+                        <p class="text-slate-400 leading-relaxed" data-key="problemCard1Desc">Repetitive tasks consume your team's valuable time, which could be used for strategic activities.</p>
                     </div>
-                    <div class="p-6 rounded-lg bg-slate-900 border border-slate-800">
-                        <i class="fas fa-magnifying-glass-chart text-2xl text-sky-400 mb-4"></i>
-                        <h3 class="font-semibold text-white mb-2" data-key="problemCard2Title">Data-less Decisions</h3>
-                        <p class="text-sm text-slate-400" data-key="problemCard2Desc">Important decisions are made based on intuition, not on a deep analysis of available data.</p>
+                    <div class="feature-card group">
+                        <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-magnifying-glass-chart text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3" data-key="problemCard2Title">Data-less Decisions</h3>
+                        <p class="text-slate-400 leading-relaxed" data-key="problemCard2Desc">Important decisions are made based on intuition, not on a deep analysis of available data.</p>
                     </div>
-                    <div class="p-6 rounded-lg bg-slate-900 border border-slate-800">
-                        <i class="fas fa-dollar-sign text-2xl text-sky-400 mb-4"></i>
-                        <h3 class="font-semibold text-white mb-2" data-key="problemCard3Title">High Costs</h3>
-                        <p class="text-sm text-slate-400" data-key="problemCard3Desc">Unoptimized processes, material waste, and quality failures generate costs that could be avoided.</p>
+                    <div class="feature-card group">
+                        <div class="w-12 h-12 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-dollar-sign text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3" data-key="problemCard3Title">High Costs</h3>
+                        <p class="text-slate-400 leading-relaxed" data-key="problemCard3Desc">Unoptimized processes, material waste, and quality failures generate costs that could be avoided.</p>
                     </div>
                 </div>
             </div>
@@ -260,30 +563,92 @@
             </div>
         </section>
 
-        <!-- How AI Creates Value Section -->
+        <!-- Enhanced Value Creation Section -->
         <section id="valor" class="py-16 sm:py-24">
             <div class="container mx-auto px-4 sm:px-6">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl sm:text-4xl font-bold text-white" data-key="valueTitle">How AI Creates Value for Your Business</h2>
-                    <p class="text-lg mt-4 max-w-3xl mx-auto text-slate-400" data-key="valueSubtitle">Technology is the means. The goal is a direct impact on your financial and operational results.</p>
+                    <div class="inline-flex items-center space-x-2 bg-green-500/10 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-4">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Value Creation</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4" data-key="valueTitle">How AI Creates Value for Your Business</h2>
+                    <p class="text-lg max-w-3xl mx-auto text-slate-400" data-key="valueSubtitle">Technology is the means. The goal is a direct impact on your financial and operational results.</p>
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
                     <!-- Revenue Growth -->
-                    <div class="bg-slate-900 p-8 rounded-xl border border-slate-800">
-                        <h3 class="text-2xl font-bold text-white mb-6" data-key="valueCard1Title">Revenue Growth</h3>
-                        <div class="space-y-5">
-                            <div class="flex items-start"><i class="fas fa-bullhorn text-xl text-sky-400 mr-4 mt-1"></i><div><strong class="text-white" data-key="valueCard1Item1Bold">Personalized Marketing:</strong> <span data-key="valueCard1Item1Desc">Increase conversion with campaigns targeted to the right audience.</span></div></div>
-                            <div class="flex items-start"><i class="fas fa-tags text-xl text-sky-400 mr-4 mt-1"></i><div><strong class="text-white" data-key="valueCard1Item2Bold">Dynamic Pricing:</strong> <span data-key="valueCard1Item2Desc">Optimize prices in real-time based on demand and market behavior.</span></div></div>
-                            <div class="flex items-start"><i class="fas fa-user-plus text-xl text-sky-400 mr-4 mt-1"></i><div><strong class="text-white" data-key="valueCard1Item3Bold">Lead Qualification:</strong> <span data-key="valueCard1Item3Desc">Focus your sales efforts on the leads most likely to close.</span></div></div>
+                    <div class="feature-card">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mr-4">
+                                <i class="fas fa-trending-up text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white" data-key="valueCard1Title">Revenue Growth</h3>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="flex items-start group">
+                                <div class="w-10 h-10 bg-gradient-to-br from-sky-400 to-sky-600 rounded-lg flex items-center justify-center mr-4 mt-1 group-hover:scale-110 transition-transform duration-300">
+                                    <i class="fas fa-bullhorn text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <strong class="text-white block mb-1" data-key="valueCard1Item1Bold">Personalized Marketing</strong>
+                                    <span class="text-slate-400" data-key="valueCard1Item1Desc">Increase conversion with campaigns targeted to the right audience.</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start group">
+                                <div class="w-10 h-10 bg-gradient-to-br from-purple-400 to-purple-600 rounded-lg flex items-center justify-center mr-4 mt-1 group-hover:scale-110 transition-transform duration-300">
+                                    <i class="fas fa-tags text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <strong class="text-white block mb-1" data-key="valueCard1Item2Bold">Dynamic Pricing</strong>
+                                    <span class="text-slate-400" data-key="valueCard1Item2Desc">Optimize prices in real-time based on demand and market behavior.</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start group">
+                                <div class="w-10 h-10 bg-gradient-to-br from-indigo-400 to-indigo-600 rounded-lg flex items-center justify-center mr-4 mt-1 group-hover:scale-110 transition-transform duration-300">
+                                    <i class="fas fa-user-plus text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <strong class="text-white block mb-1" data-key="valueCard1Item3Bold">Lead Qualification</strong>
+                                    <span class="text-slate-400" data-key="valueCard1Item3Desc">Focus your sales efforts on the leads most likely to close.</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!-- Process Optimization -->
-                    <div class="bg-slate-900 p-8 rounded-xl border border-slate-800">
-                        <h3 class="text-2xl font-bold text-white mb-6" data-key="valueCard2Title">Process Optimization</h3>
-                        <div class="space-y-5">
-                            <div class="flex items-start"><i class="fas fa-gears text-xl text-sky-400 mr-4 mt-1"></i><div><strong class="text-white" data-key="valueCard2Item1Bold">Backoffice Automation:</strong> <span data-key="valueCard2Item1Desc">Reduce costs by automating tasks like invoicing and data entry.</span></div></div>
-                            <div class="flex items-start"><i class="fas fa-truck-fast text-xl text-sky-400 mr-4 mt-1"></i><div><strong class="text-white" data-key="valueCard2Item2Bold">Supply Chain Optimization:</strong> <span data-key="valueCard2Item2Desc">Forecast demand and optimize delivery routes and inventory levels.</span></div></div>
-                            <div class="flex items-start"><i class="fas fa-screwdriver-wrench text-xl text-sky-400 mr-4 mt-1"></i><div><strong class="text-white" data-key="valueCard2Item3Bold">Predictive Maintenance:</strong> <span data-key="valueCard2Item3Desc">Avoid unexpected downtime by predicting equipment failures before they happen.</span></div></div>
+                    <div class="feature-card">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mr-4">
+                                <i class="fas fa-cogs text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white" data-key="valueCard2Title">Process Optimization</h3>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="flex items-start group">
+                                <div class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-lg flex items-center justify-center mr-4 mt-1 group-hover:scale-110 transition-transform duration-300">
+                                    <i class="fas fa-gears text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <strong class="text-white block mb-1" data-key="valueCard2Item1Bold">Backoffice Automation</strong>
+                                    <span class="text-slate-400" data-key="valueCard2Item1Desc">Reduce costs by automating tasks like invoicing and data entry.</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start group">
+                                <div class="w-10 h-10 bg-gradient-to-br from-teal-400 to-teal-600 rounded-lg flex items-center justify-center mr-4 mt-1 group-hover:scale-110 transition-transform duration-300">
+                                    <i class="fas fa-truck-fast text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <strong class="text-white block mb-1" data-key="valueCard2Item2Bold">Supply Chain Optimization</strong>
+                                    <span class="text-slate-400" data-key="valueCard2Item2Desc">Forecast demand and optimize delivery routes and inventory levels.</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start group">
+                                <div class="w-10 h-10 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-lg flex items-center justify-center mr-4 mt-1 group-hover:scale-110 transition-transform duration-300">
+                                    <i class="fas fa-screwdriver-wrench text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <strong class="text-white block mb-1" data-key="valueCard2Item3Bold">Predictive Maintenance</strong>
+                                    <span class="text-slate-400" data-key="valueCard2Item3Desc">Avoid unexpected downtime by predicting equipment failures before they happen.</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -338,99 +703,152 @@
             </div>
         </section>
         
-        <!-- Contact Section -->
-        <section id="contato" class="py-16 sm:py-24 bg-slate-900">
+        <!-- Enhanced Contact Section -->
+        <section id="contato" class="py-16 sm:py-24 bg-slate-900 section-glow">
             <div class="container mx-auto px-4 sm:px-6">
                 <div class="max-w-2xl mx-auto text-center">
-                    <h2 class="text-3xl sm:text-4xl font-bold text-white" data-key="contactTitle">Schedule Your Strategic AI Diagnosis</h2>
-                    <p class="text-lg mt-4 text-slate-400" data-key="contactSubtitle">Let's discover the potential of Artificial Intelligence in your business together. The first analysis is free and non-binding.</p>
+                    <div class="inline-flex items-center space-x-2 bg-sky-500/10 text-sky-400 px-4 py-2 rounded-full text-sm font-medium mb-4">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Free Consultation</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4" data-key="contactTitle">Schedule Your Strategic AI Diagnosis</h2>
+                    <p class="text-lg text-slate-400" data-key="contactSubtitle">Let's discover the potential of Artificial Intelligence in your business together. The first analysis is free and non-binding.</p>
                 </div>
-                <div class="max-w-xl mx-auto mt-12 bg-slate-950 p-8 rounded-xl border border-slate-800">
-                    <form id="contact-form">
-                        <div class="space-y-6">
-                            <div>
-                                <label for="name" class="block text-sm font-medium text-slate-300 mb-2" data-key="formName">Full Name</label>
-                                <input type="text" id="name" name="name" class="w-full bg-slate-800 border border-slate-700 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-sky-500 text-white" required>
-                            </div>
-                            <div>
-                                <label for="email" class="block text-sm font-medium text-slate-300 mb-2" data-key="formEmail">Work Email</label>
-                                <input type="email" id="email" name="email" class="w-full bg-slate-800 border border-slate-700 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-sky-500 text-white" required>
-                            </div>
-                            <div>
-                                <label for="message" class="block text-sm font-medium text-slate-300 mb-2" data-key="formChallenge">Your Main Business Challenge</label>
-                                <textarea id="message" name="message" rows="5" class="w-full bg-slate-800 border border-slate-700 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-sky-500 text-white" data-key="formPlaceholder"></textarea>
+                <div class="max-w-xl mx-auto mt-12">
+                    <div class="glass-card p-8 rounded-2xl">
+                        <div class="flex items-center justify-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-sky-500 to-blue-600 rounded-2xl flex items-center justify-center">
+                                <i class="fas fa-comments text-white text-2xl"></i>
                             </div>
                         </div>
-                        <div class="mt-8">
-                            <button type="submit" class="w-full bg-sky-500 text-white font-bold py-3.5 px-10 rounded-lg hover:bg-sky-600 transition-all duration-300" data-key="formSubmit">
-                                Send via WhatsApp
-                            </button>
+                        <form id="contact-form" class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-slate-300 mb-2" data-key="formName">
+                                        <i class="fas fa-user mr-2 text-sky-400"></i>Full Name
+                                    </label>
+                                    <input type="text" id="name" name="name" class="w-full form-input" placeholder="John Doe" required>
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-slate-300 mb-2" data-key="formEmail">
+                                        <i class="fas fa-envelope mr-2 text-sky-400"></i>Work Email
+                                    </label>
+                                    <input type="email" id="email" name="email" class="w-full form-input" placeholder="john@company.com" required>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-slate-300 mb-2" data-key="formChallenge">
+                                    <i class="fas fa-lightbulb mr-2 text-sky-400"></i>Your Main Business Challenge
+                                </label>
+                                <textarea id="message" name="message" rows="4" class="w-full form-input" placeholder="Tell us about your main business challenge..." data-key="formPlaceholder"></textarea>
+                            </div>
+                            <div class="pt-4">
+                                <button type="submit" class="w-full btn-primary text-lg group" data-key="formSubmit">
+                                    <i class="fab fa-whatsapp mr-2 group-hover:scale-110 transition-transform"></i>
+                                    Send via WhatsApp
+                                    <div class="loading-spinner hidden ml-2"></div>
+                                </button>
+                            </div>
+                        </form>
+                        
+                        <!-- Quick Contact Options -->
+                        <div class="mt-8 pt-6 border-t border-slate-700/50">
+                            <p class="text-center text-sm text-slate-400 mb-4">Or contact us directly:</p>
+                            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                                <a href="mailto:info@itcbr.io" class="btn-secondary text-sm group">
+                                    <i class="fas fa-envelope mr-2 group-hover:scale-110 transition-transform"></i>
+                                    info@itcbr.io
+                                </a>
+                                <a href="tel:+5588997889999" class="btn-secondary text-sm group">
+                                    <i class="fas fa-phone mr-2 group-hover:scale-110 transition-transform"></i>
+                                    +55 88 99788 9999
+                                </a>
+                            </div>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-slate-950 border-t border-slate-800">
+    <!-- Enhanced Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800/50">
         <div class="container mx-auto px-4 sm:px-6 py-12">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
                 <!-- Company Info Column -->
                 <div class="lg:col-span-4">
-                    <h3 class="text-xl font-bold text-white">ITCBR.<span class="text-sky-400">IO</span></h3>
-                    <p class="text-sm mt-2 text-slate-400">ITCBR.IO LTDA<br>CNPJ: 53.821.516/0001-63</p>
-                    <p class="text-sm mt-4 text-slate-400" data-key="footerSlogan">Your strategic partner on the digital transformation journey.</p>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-sky-500 to-blue-600 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-brain text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">ITCBR.<span class="text-sky-400">IO</span></h3>
+                    </div>
+                    <p class="text-sm text-slate-400 mb-2">ITCBR.IO LTDA<br>CNPJ: 53.821.516/0001-63</p>
+                    <p class="text-sm text-slate-400" data-key="footerSlogan">Your strategic partner on the digital transformation journey.</p>
                 </div>
                 <!-- Links & Contact Columns -->
                 <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-8">
                     <div>
-                        <h4 class="font-semibold text-white tracking-wider" data-key="footerLinks">Links</h4>
-                        <ul class="mt-4 space-y-2 text-sm text-slate-400">
-                            <li><a href="#metodologia" class="hover:text-sky-400" data-key="footerLinkMethodology">Methodology</a></li>
-                            <li><a href="#valor" class="hover:text-sky-400" data-key="footerLinkValue">Value Creation</a></li>
-                            <li><a href="#cases" class="hover:text-sky-400" data-key="footerLinkCases">Success Cases</a></li>
+                        <h4 class="font-semibold text-white tracking-wider mb-4" data-key="footerLinks">Quick Links</h4>
+                        <ul class="space-y-3 text-sm text-slate-400">
+                            <li><a href="#metodologia" class="hover:text-sky-400 transition-colors flex items-center" data-key="footerLinkMethodology"><i class="fas fa-chevron-right mr-2 text-xs"></i>Methodology</a></li>
+                            <li><a href="#valor" class="hover:text-sky-400 transition-colors flex items-center" data-key="footerLinkValue"><i class="fas fa-chevron-right mr-2 text-xs"></i>Value Creation</a></li>
+                            <li><a href="#cases" class="hover:text-sky-400 transition-colors flex items-center" data-key="footerLinkCases"><i class="fas fa-chevron-right mr-2 text-xs"></i>Success Cases</a></li>
+                            <li><a href="Terms.html" class="hover:text-sky-400 transition-colors flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Terms of Use</a></li>
                         </ul>
                     </div>
                     <div>
-                        <h4 class="font-semibold text-white tracking-wider" data-key="footerAddress">Address</h4>
-                        <address class="mt-4 text-sm not-italic text-slate-400">
+                        <h4 class="font-semibold text-white tracking-wider mb-4" data-key="footerAddress">Address</h4>
+                        <address class="text-sm not-italic text-slate-400 leading-relaxed">
+                            <i class="fas fa-map-marker-alt text-sky-400 mr-2"></i>
                             Avenida Washington Soares, Nº 55, Sala 516<br>
-                            Edson Queiroz - CEP: 60.811-341<br>
-                            Fortaleza, Ceará
+                            <span class="ml-5">Edson Queiroz - CEP: 60.811-341</span><br>
+                            <span class="ml-5">Fortaleza, Ceará</span>
                         </address>
                     </div>
                     <div>
-                        <h4 class="font-semibold text-white tracking-wider" data-key="footerContact">Contact</h4>
-                        <ul class="mt-4 space-y-2 text-sm text-slate-400">
-                            <li><a href="mailto:info@itcbr.io" class="hover:text-sky-400 flex items-start"><i class="fas fa-envelope fa-fw mr-2 mt-1"></i><span>info@itcbr.io</span></a></li>
-                            <li><a href="tel:+5588997889999" class="hover:text-sky-400 flex items-start"><i class="fas fa-phone fa-fw mr-2 mt-1"></i><span>+55 88 99788 9999</span></a></li>
+                        <h4 class="font-semibold text-white tracking-wider mb-4" data-key="footerContact">Contact</h4>
+                        <ul class="space-y-3 text-sm text-slate-400">
+                            <li><a href="mailto:info@itcbr.io" class="hover:text-sky-400 transition-colors flex items-center group"><i class="fas fa-envelope mr-3 text-sky-400 group-hover:scale-110 transition-transform"></i><span>info@itcbr.io</span></a></li>
+                            <li><a href="tel:+5588997889999" class="hover:text-sky-400 transition-colors flex items-center group"><i class="fas fa-phone mr-3 text-sky-400 group-hover:scale-110 transition-transform"></i><span>+55 88 99788 9999</span></a></li>
                         </ul>
-                        <div class="mt-4 flex space-x-4">
-                            <a href="https://www.instagram.com/itcbrio/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-sky-400">
-                                <i class="fa-brands fa-instagram text-xl"></i><span class="sr-only">Instagram</span>
-                            </a>
-                            <a href="https://www.youtube.com/@ITCBR_IO" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-sky-400">
-                                <i class="fa-brands fa-youtube text-xl"></i><span class="sr-only">YouTube</span>
-                            </a>
-                            <a href="https://www.tiktok.com/@itcbrioltda" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-sky-400">
-                                <i class="fa-brands fa-tiktok text-xl"></i><span class="sr-only">TikTok</span>
-                            </a>
+                        <div class="mt-6">
+                            <p class="text-sm text-slate-400 mb-3">Follow us:</p>
+                            <div class="flex space-x-3">
+                                <a href="https://www.instagram.com/itcbrio/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:bg-gradient-to-br hover:from-pink-500 hover:to-orange-400 transition-all duration-300">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="https://www.youtube.com/@ITCBR_IO" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:bg-red-600 transition-all duration-300">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>
+                                <a href="https://www.tiktok.com/@itcbrioltda" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:bg-gradient-to-br hover:from-gray-900 hover:to-gray-600 transition-all duration-300">
+                                    <i class="fa-brands fa-tiktok"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="mt-12 border-t border-slate-800 pt-8 text-center text-sm text-slate-500">
-                <p data-key="footerCopyright">&copy; 2024 ITCBR.IO. All rights reserved.</p>
+            <div class="mt-12 pt-8 border-t border-slate-800/50">
+                <div class="flex flex-col sm:flex-row items-center justify-between text-sm text-slate-500">
+                    <p data-key="footerCopyright">&copy; 2024 ITCBR.IO. All rights reserved.</p>
+                    <p class="mt-2 sm:mt-0">Made with <i class="fas fa-heart text-red-500"></i> in Brazil</p>
+                </div>
             </div>
         </div>
     </footer>
     
-    <!-- Back to Top Button -->
+    <!-- Enhanced Back to Top Button -->
     <div x-data="{ show: false }" @scroll.window="show = (window.scrollY > 600)" x-cloak>
         <button x-show="show" @click="window.scrollTo({top: 0, behavior: 'smooth'})"
-                x-transition
-                class="fixed bottom-6 right-6 bg-sky-500/80 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-sky-600 focus:outline-none z-30">
+                x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="opacity-0 scale-75"
+                x-transition:enter-end="opacity-100 scale-100"
+                x-transition:leave="transition ease-in duration-200"
+                x-transition:leave-start="opacity-100 scale-100"
+                x-transition:leave-end="opacity-0 scale-75"
+                class="fixed bottom-20 left-6 bg-gradient-to-r from-sky-500 to-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-xl hover:scale-110 focus:outline-none z-30 transition-all duration-300 tooltip"
+                data-tooltip="Back to Top">
             <i class="fas fa-arrow-up"></i>
         </button>
     </div>
@@ -825,6 +1243,68 @@
             }
             if (voiceTranslatorNumberLink) {
                 voiceTranslatorNumberLink.href = createVoiceTranslatorWhatsappLink();
+            }
+
+            // Scroll Progress Indicator
+            const scrollIndicator = document.getElementById('scroll-indicator');
+            if (scrollIndicator) {
+                const updateScrollProgress = () => {
+                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    const documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                    const scrollProgress = (scrollTop / documentHeight) * 100;
+                    scrollIndicator.style.transform = `scaleX(${scrollProgress / 100})`;
+                };
+
+                window.addEventListener('scroll', updateScrollProgress);
+                updateScrollProgress(); // Initial call
+            }
+
+            // Enhanced Form Interactions
+            const formInputs = document.querySelectorAll('.form-input');
+            formInputs.forEach(input => {
+                input.addEventListener('focus', function() {
+                    this.parentElement.classList.add('focused');
+                });
+                
+                input.addEventListener('blur', function() {
+                    this.parentElement.classList.remove('focused');
+                    if (this.value) {
+                        this.parentElement.classList.add('filled');
+                    } else {
+                        this.parentElement.classList.remove('filled');
+                    }
+                });
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Add loading state to form submission
+            const submitButton = document.querySelector('#contact-form button[type="submit"]');
+            const loadingSpinner = document.querySelector('#contact-form .loading-spinner');
+            
+            if (contactForm && submitButton && loadingSpinner) {
+                contactForm.addEventListener('submit', function() {
+                    submitButton.disabled = true;
+                    loadingSpinner.classList.remove('hidden');
+                    
+                    // Re-enable after a delay (simulating form processing)
+                    setTimeout(() => {
+                        submitButton.disabled = false;
+                        loadingSpinner.classList.add('hidden');
+                    }, 2000);
+                });
             }
         });
     </script>
