@@ -1251,6 +1251,8 @@
 
 
         document.addEventListener('DOMContentLoaded', () => {
+            // Error handling wrapper
+            try {
             // Set initial language to English by default
             const savedLang = localStorage.getItem('language') || 'en'; // Changed default to 'en'
             changeLanguage(savedLang);
@@ -1341,6 +1343,9 @@
                         loadingSpinner.classList.add('hidden');
                     }, 2000);
                 });
+            }
+            } catch (error) {
+                console.error('Error in main script:', error);
             }
         });
     </script>
